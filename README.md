@@ -30,12 +30,20 @@ Description of repo structure:
 
 ```
 .
+├── Datasheets
+│   ├── MOSFET.pdf
+│   ├── RASBERRY_PI.pdf
+│   ├── REGULATEUR.pdf
+│   ├── TOF.pdf
+│   └── datasheet_Driver_pichlerXQ30.pdf
 ├── Firmware
 ├── Hardware
 │   └── SchemaArchi_Ingenuity_V1.jpg
 ├── Output
+│   └── Matériel Projet 2A.xlsx
 ├── README.md
 └── Software
+
 
 ``````
 
