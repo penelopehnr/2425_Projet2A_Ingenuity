@@ -24,10 +24,19 @@ Ingenuity a ouvert de nouvelles perspectives pour l'exploration de Mars. La NASA
 
  Notre projet est donc d'essayer de réaliser le module Ingenuity en miniature. C'est à dire que l'on veut créer un véhicule pouvant se déplacer dans les airs et prendre une photo de ce qu'il se passe en dessous.
 
-https://private-user-images.githubusercontent.com/161329228/309313714-e31ebabd-f48c-485a-bf0c-799dc236c984.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjY1Nzg2NzQsIm5iZiI6MTcyNjU3ODM3NCwicGF0aCI6Ii8xNjEzMjkyMjgvMzA5MzEzNzE0LWUzMWViYWJkLWY0OGMtNDg1YS1iZjBjLTc5OWRjMjM2Yzk4NC5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwOTE3JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDkxN1QxMzA2MTRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0wZTMwMDVjOGJiOGE1OTY4YmIxOGYwNWVjYTczODc1ODQzMmQzYmM0OGQ0OTE1OTdlOTIwNzE0ZThiZjVhMWRkJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.AaHf2xstlzs74Qji4YSox_vUnH1dEOAMPJLrhiIXZrw
+![Photo ingenuity](https://github.com/joel-colaso/2324_Projet1AB_-ingenuity-/assets/161329228/e31ebabd-f48c-485a-bf0c-799dc236c984)
 
 Description of repo structure:
 
+```
+.
+├── Firmware
+├── Hardware
+├── Output
+├── README.md
+└── Software
+
+``````
 
 
 Description of files: TO DO
