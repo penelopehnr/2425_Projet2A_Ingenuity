@@ -32,6 +32,7 @@ Description of repo structure:
 .
 ├── Firmware
 ├── Hardware
+│   └── SchemaArchi_Ingenuity_V1.jpg
 ├── Output
 ├── README.md
 └── Software
