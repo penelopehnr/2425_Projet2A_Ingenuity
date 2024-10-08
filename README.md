@@ -35,14 +35,149 @@ Description of repo structure:
 │   ├── RASBERRY_PI.pdf
 │   ├── REGULATEUR.pdf
 │   ├── TOF.pdf
-│   └── datasheet_Driver_pichlerXQ30.pdf
+│   ├── datasheet_Driver_pichlerXQ30.pdf
+│   ├── datasheet_IMU.pdf
+│   ├── datasheet_LDO_BU33TD3WG.pdf
+│   └── datasheet_buck_17395xx36.pdf
 ├── Firmware
 ├── Hardware
-│   └── SchemaArchi_Ingenuity_V1.jpg
+│   ├── PIN_STM32.png
+│   ├── SchemaArchi_Ingenuity_V1.jpg
+│   ├── SchemaArchi_Ingenuity_V2.jpg
+│   ├── SchemaArchi_Ingenuity_V3.jpg.png
+│   └── SchemaArchi_Ingenuity_V4.jpg
+├── Ingenuity_Mars2020.md
 ├── Output
 │   └── Matériel Projet 2A.xlsx
 ├── README.md
 └── Software
+    └── Ingenuity_2A
+        ├── Core
+        │   ├── Inc
+        │   │   ├── main.h
+        │   │   ├── stm32l4xx_hal_conf.h
+        │   │   └── stm32l4xx_it.h
+        │   ├── Src
+        │   │   ├── main.c
+        │   │   ├── stm32l4xx_hal_msp.c
+        │   │   ├── stm32l4xx_it.c
+        │   │   ├── syscalls.c
+        │   │   ├── sysmem.c
+        │   │   └── system_stm32l4xx.c
+        │   └── Startup
+        │       └── startup_stm32l412kbtx.s
+        ├── Drivers
+        │   ├── CMSIS
+        │   │   ├── Device
+        │   │   │   └── ST
+        │   │   │       └── STM32L4xx
+        │   │   │           ├── Include
+        │   │   │           │   ├── stm32l412xx.h
+        │   │   │           │   ├── stm32l4xx.h
+        │   │   │           │   └── system_stm32l4xx.h
+        │   │   │           ├── LICENSE.txt
+        │   │   │           ├── License.md
+        │   │   │           └── Source
+        │   │   │               └── Templates
+        │   │   ├── Include
+        │   │   │   ├── cmsis_armcc.h
+        │   │   │   ├── cmsis_armclang.h
+        │   │   │   ├── cmsis_armclang_ltm.h
+        │   │   │   ├── cmsis_compiler.h
+        │   │   │   ├── cmsis_gcc.h
+        │   │   │   ├── cmsis_iccarm.h
+        │   │   │   ├── cmsis_version.h
+        │   │   │   ├── core_armv81mml.h
+        │   │   │   ├── core_armv8mbl.h
+        │   │   │   ├── core_armv8mml.h
+        │   │   │   ├── core_cm0.h
+        │   │   │   ├── core_cm0plus.h
+        │   │   │   ├── core_cm1.h
+        │   │   │   ├── core_cm23.h
+        │   │   │   ├── core_cm3.h
+        │   │   │   ├── core_cm33.h
+        │   │   │   ├── core_cm35p.h
+        │   │   │   ├── core_cm4.h
+        │   │   │   ├── core_cm7.h
+        │   │   │   ├── core_sc000.h
+        │   │   │   ├── core_sc300.h
+        │   │   │   ├── mpu_armv7.h
+        │   │   │   ├── mpu_armv8.h
+        │   │   │   └── tz_context.h
+        │   │   └── LICENSE.txt
+        │   └── STM32L4xx_HAL_Driver
+        │       ├── Inc
+        │       │   ├── Legacy
+        │       │   │   └── stm32_hal_legacy.h
+        │       │   ├── stm32l4xx_hal.h
+        │       │   ├── stm32l4xx_hal_adc.h
+        │       │   ├── stm32l4xx_hal_adc_ex.h
+        │       │   ├── stm32l4xx_hal_cortex.h
+        │       │   ├── stm32l4xx_hal_def.h
+        │       │   ├── stm32l4xx_hal_dma.h
+        │       │   ├── stm32l4xx_hal_dma_ex.h
+        │       │   ├── stm32l4xx_hal_exti.h
+        │       │   ├── stm32l4xx_hal_flash.h
+        │       │   ├── stm32l4xx_hal_flash_ex.h
+        │       │   ├── stm32l4xx_hal_flash_ramfunc.h
+        │       │   ├── stm32l4xx_hal_gpio.h
+        │       │   ├── stm32l4xx_hal_gpio_ex.h
+        │       │   ├── stm32l4xx_hal_i2c.h
+        │       │   ├── stm32l4xx_hal_i2c_ex.h
+        │       │   ├── stm32l4xx_hal_pwr.h
+        │       │   ├── stm32l4xx_hal_pwr_ex.h
+        │       │   ├── stm32l4xx_hal_rcc.h
+        │       │   ├── stm32l4xx_hal_rcc_ex.h
+        │       │   ├── stm32l4xx_hal_spi.h
+        │       │   ├── stm32l4xx_hal_spi_ex.h
+        │       │   ├── stm32l4xx_hal_tim.h
+        │       │   ├── stm32l4xx_hal_tim_ex.h
+        │       │   ├── stm32l4xx_hal_uart.h
+        │       │   ├── stm32l4xx_hal_uart_ex.h
+        │       │   ├── stm32l4xx_ll_adc.h
+        │       │   ├── stm32l4xx_ll_bus.h
+        │       │   ├── stm32l4xx_ll_cortex.h
+        │       │   ├── stm32l4xx_ll_crs.h
+        │       │   ├── stm32l4xx_ll_dma.h
+        │       │   ├── stm32l4xx_ll_dmamux.h
+        │       │   ├── stm32l4xx_ll_exti.h
+        │       │   ├── stm32l4xx_ll_gpio.h
+        │       │   ├── stm32l4xx_ll_i2c.h
+        │       │   ├── stm32l4xx_ll_lpuart.h
+        │       │   ├── stm32l4xx_ll_pwr.h
+        │       │   ├── stm32l4xx_ll_rcc.h
+        │       │   ├── stm32l4xx_ll_spi.h
+        │       │   ├── stm32l4xx_ll_system.h
+        │       │   ├── stm32l4xx_ll_tim.h
+        │       │   ├── stm32l4xx_ll_usart.h
+        │       │   └── stm32l4xx_ll_utils.h
+        │       ├── LICENSE.txt
+        │       └── Src
+        │           ├── stm32l4xx_hal.c
+        │           ├── stm32l4xx_hal_adc.c
+        │           ├── stm32l4xx_hal_adc_ex.c
+        │           ├── stm32l4xx_hal_cortex.c
+        │           ├── stm32l4xx_hal_dma.c
+        │           ├── stm32l4xx_hal_dma_ex.c
+        │           ├── stm32l4xx_hal_exti.c
+        │           ├── stm32l4xx_hal_flash.c
+        │           ├── stm32l4xx_hal_flash_ex.c
+        │           ├── stm32l4xx_hal_flash_ramfunc.c
+        │           ├── stm32l4xx_hal_gpio.c
+        │           ├── stm32l4xx_hal_i2c.c
+        │           ├── stm32l4xx_hal_i2c_ex.c
+        │           ├── stm32l4xx_hal_pwr.c
+        │           ├── stm32l4xx_hal_pwr_ex.c
+        │           ├── stm32l4xx_hal_rcc.c
+        │           ├── stm32l4xx_hal_rcc_ex.c
+        │           ├── stm32l4xx_hal_spi.c
+        │           ├── stm32l4xx_hal_spi_ex.c
+        │           ├── stm32l4xx_hal_tim.c
+        │           ├── stm32l4xx_hal_tim_ex.c
+        │           ├── stm32l4xx_hal_uart.c
+        │           └── stm32l4xx_hal_uart_ex.c
+        ├── Ingenuity_2A.ioc
+        └── STM32L412KBTX_FLASH.ld
 
 
 ``````
