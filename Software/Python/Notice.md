@@ -1,6 +1,6 @@
 # Notice des etapes pour que le code fonctionne bien :
 
-### 1. Se connecter sur Filezilla a la RasberryPi0
+### 1. Se connecter sur Filezilla à la RasberryPi0
 
 ### 2. Lancer VsCode et le cmd
 
