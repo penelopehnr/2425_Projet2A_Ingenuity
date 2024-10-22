@@ -1,11 +1,11 @@
 Notice des étapes pour que le code fonctionne bien : 
-- Se connecter sur Filezilla à la RasberryPi0
-- Lancer VsCode et le cmd
-- Se connecter à la RasberryPi0 sur le cmd
-  -> ssh rpihuser@192.168.0.235
-- Éxécuter en temps qu'admin code server.py sur le cmd 
-  -> sudo python3 server.py
-- Éxécuter le code client sur VsCode 
-  -> CRTL+F5 sur client.py
-- Suivre les demandes du programme
-- En cas de photos, les récupérer sur FileZilla
+1. Se connecter sur Filezilla à la RasberryPi0
+2. Lancer VsCode et le cmd
+3. Se connecter à la RasberryPi0 sur le cmd
+  - ssh rpihuser@192.168.0.235
+4. Éxécuter en temps qu'admin code server.py sur le cmd 
+  - sudo python3 server.py
+5. Éxécuter le code client sur VsCode 
+  - CRTL+F5 sur client.py
+6. Suivre les demandes du programme
+7. En cas de photos, les récupérer sur FileZilla
