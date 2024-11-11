@@ -1,23 +1,23 @@
-# Executer sudo python3 server.py sur la rasberry et Client.py ici 
+# Run sudo python3 server.py on the rasberry and Client.py here 
 
 import socket
 
-# Remplace 'adresse_ip_pi' par l'adresse IP de ton Raspberry Pi
+# Replace 'adresse_ip_pi' with the IP address of your Raspberry Pi
 ip_pi = '192.168.0.235'
 port = 12345
 
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client_socket.connect((ip_pi, port))
 
-print("")
-print("What do you want to do? Take a picture, stop or set the height ?")
-print("")
-
-## Liste des commandes
+## Order list
 command_list = ["\tLeave -> stop","\tTake photo -> take_photo", "\tA Set a height -> set_height"]
 print("List of available orders :")
 for elmt in command_list:
     print(elmt)
+
+print("")
+print("What do you want to do? Take a picture, stop or set the height ?")
+print("")
 
 while True:
     print("")
@@ -41,9 +41,3 @@ while True:
         print("Unknown Command") 
         
 client_socket.close()
-
-
-
-"""Demande une hauteur, tant qu'elle est pas atteinte on ne demande rien d'autre. 
-Quand elle est atteinte, on demande ce que veut l'utilisateiur : 
-atterrir, prendre une photo ou modifier la hauteur"""
