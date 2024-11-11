@@ -1,58 +1,58 @@
-# Projet Ingenuity 
+# Ingenuity project 
 
-## Introduction: Ingenuity dans le cadre de la mission Mars 2020. 
+## Introduction: Ingenuity as part of the Mars 2020 mission. 
 
-Mars 2020 est une mission spatiale qui consiste à déployer l'astromobile (rover) Perseverance sur le sol martien pour étudier sa surface et collecter des échnatillons du sol. Elle constitue la première d'une série de trois missions dont l'objectif final est de ramener ces échantillons sur Terre pour leur analyse. 
+Mars 2020 is a space mission that will deploy the Perseverance rover on the Martian surface to study its surface and collect soil samples. It is the first of a series of three missions whose ultimate aim is to return these samples to Earth for analysis. 
 
-Ingenuity est un petit hélicoptère développé par l'agence spatiale Américaine, la NASA. Il est mis en oeuvre à titre expérimental sur le sol de la planète Mars au cours de la mission Mars 2020.
-L'hélicoptère est embarqué à bord du rover Perseverance. 
+Ingenuity is a small helicopter developed by NASA, the US space agency. It is being used experimentally on the surface of Mars during the Mars 2020 mission.
+The helicopter is on board the Perseverance rover. 
 
-Le 19 avril 2021, pour la première fois dans l'histoire de l'ère spatiale, un engin effectue un vol motorisé dans l'atmosphère ténue d'une autre planète. L'objectif d'Ingenuity est la reconnaissance optique du terrain, l'hélicoptère réalise de nombreuses photos aériennes utiliées par les pilotes de l'astromobile Perseverance pour identifier les obstacles et les sites prometteurs (prelèvement d'échantillons rocheux sur le sol martien). En effet, L'atmosphère très ténue (suelemnt 1% de la pression atmosphérique présente sur Terre) n'offre qu'une portance très faible et la mise au point d'un aérobot est par conséquent plus difficile. 
+On April 19, 2021, for the first time in the history of the space age, a spacecraft makes a powered flight through the tenuous atmosphere of another planet. Ingenuity's objective is optical reconnaissance of the terrain, with the helicopter taking numerous aerial photos which are used by the pilots of the Perseverance astromobile to identify obstacles and promising sites (taking rock samples from the Martian soil). The tenuous atmosphere (only 1% of Earth's atmospheric pressure) offers very little lift, making it more difficult to develop an aerobot. 
 
-Ingenuity est un hélicoptère de 1,8 kg disposant de 2 rotors contrarotatifs coaxiaux. Il tire son énergie de 6 batteries lithium-ion rechargées par des cellules solaires. Son système de navigation lui permet de suivre sans intervention humaine un trajet pré-programmé. Sa seule charge utile est une caméra. 
+Ingenuity is a 1.8 kg helicopter with 2 coaxial counter-rotating rotors. It draws its energy from 6 lithium-ion batteries recharged by solar cells. Its navigation system enables it to follow a pre-programmed route without human intervention. Its only payload is a camera. 
 
-La mission s'est récemment arrêtée (18 janvier 2024) en raison de la casse d'un pale lors du 72e vol. 
+The mission recently came to an end (January 18, 2024) when a blade broke during the 72nd flight. 
 
-Ingenuity a ouvert de nouvelles perspectives pour l'exploration de Mars. La NASA et l'ESA, dans leur mission de retour d'échantillons martien, incluent maintenant 2 hélicopères similaires qui seront chargés de collecter les tubes contenant les échantillons martien déposés par l'astromobile Perseverance en cas de panne de celui-ci. 
+Ingenuity has opened up new prospects for Mars exploration. NASA and ESA, in their Mars Sample Return mission, are now including 2 similar helicopters which will be responsible for collecting the tubes containing the Mars samples deposited by the Perseverance astromobile in the event of its failure. 
 
-La mission Mars Sample Return sera la première utilisation opérationnelle d'Ingenuity. Développée par la NASA en collaboration avec l'Agence spatiale européenne, elle a pour objectif de ramener sur Terre les échantillons de sol martien prélevés par l'astromobile Perseverance. Pour remplir cet objectif la mission prévoit d'envoyer un atterrisseur, Sample Retrieval Lander (SRL), emportant un bras téléopéré permettant de récupérer les tubes contenant les échantillons de sol. Si ces derniers se trouvent hors de portée de l'atterrisseur à la suite d'une panne de Perseverance, SRL dispose de deux hélicoptères Sample Recovery Helicopter, directement dérivés de l'hélicoptère Ingenuity, équipés d'une pince pour récupérer les tubes là où ils ont été déposés.
+The Mars Sample Return mission will be Ingenuity's first operational use. Developed by NASA in collaboration with the European Space Agency, its aim is to return to Earth the Martian soil samples collected by the Perseverance astromobile. To achieve this objective, the mission plans to send a lander, Sample Retrieval Lander (SRL), carrying a remotely operated arm to retrieve the tubes containing the soil samples. If the soil samples are out of reach of the lander due to a failure of Perseverance, SRL has two Sample Recovery Helicopters, directly derived from the Ingenuity helicopter, equipped with a grabber to retrieve the tubes from where they were deposited.
 
-## Première approche de l'anatomie de l'hélicoptère Martien
+## First look at the anatomy of the Martian helicopter
 
-Le site de la NASA donnant de nombreuses informations sur Ingenuity: (https://mars.nasa.gov/technology/helicopter/#)
+NASA's website with extensive information on Ingenuity: (https://mars.nasa.gov/technology/helicopter/#)
 
-<img width="1014" alt="Capture d’écran 2024-02-26 à 14 47 01" src="https://github.com/joel-colaso/2324_Projet1AB_-ingenuity-/assets/161329228/ec56dfa6-b859-430e-8665-364e45866630">
+<img width=“1014” alt=“Screenshot 2024-02-26 at 14 47 01” src=“https://github.com/joel-colaso/2324_Projet1AB_-ingenuity-/assets/161329228/ec56dfa6-b859-430e-8665-364e45866630”>
 
-<img width="1210" alt="Capture d’écran 2024-02-26 à 14 47 34" src="https://github.com/joel-colaso/2324_Projet1AB_-ingenuity-/assets/161329228/0fe71f29-cba0-405e-a0ff-b863bfc618c3">
+<img width=“1210” alt=“Screenshot 2024-02-26 at 14 47 34” src=“https://github.com/joel-colaso/2324_Projet1AB_-ingenuity-/assets/161329228/0fe71f29-cba0-405e-a0ff-b863bfc618c3”>
 
-## Exploration du fonctionnement de l'hélicoptère
+## Exploring helicopter operation
 
 ### Propulsion: 
 
-L'hélicoptère se déplace dans les airs grâce à deux rotors contrarotatifs coaxiaux bipales. La vitesse de rotation est comprise entre 2400 et 2900 tours par minute, soit dix fois celle d'un rotor principal d'hélicoptère sur terre, pour pouvoir être efficace dans l'air peu dense de Mars. C'est une condition que nous ne pourrons pas remplir. 
+The helicopter moves through the air thanks to two coaxial, two-bladed counter-rotating rotors. The rotational speed is between 2,400 and 2,900 rpm, ten times that of a helicopter main rotor on Earth, to be effective in the thin air of Mars. This is a condition we won't be able to meet. 
 
-La compréhension du mode de fontionnement des hélices d'un hélicoptère nous permet de soulever de premières difficultés: il faut des hélices de petites tailles qui sont coaxiales et contrarotatives, des pièces qu'il nous ai impossible de construire nous même (impression 3D). Une solution que nous avons pouvons mettre en place est l'utilisation d'hélices prélevées sur un hélicoptère télécommandé. On démontera l'appareil pour ne garder que les hélices sur l'axe et les moteurs, tout l'éléctronique sera reconstruit selon notre cahier des charges. 
+Understanding how helicopter propellers work helps us to overcome the first difficulties: we need small, coaxial, counter-rotating propellers, parts that we can't build ourselves (3D printing). One solution we've come up with is to use propellers taken from a remote-controlled helicopter. We'll dismantle the aircraft to keep only the propellers on the axis and the engines, and rebuild all the electronics according to our specifications. 
 
-Type d'aéronef: l'utilisation de rotors contrarotatifs coaxiaux permet de gagner en encombrement par rapport au recours à un rotor anticouple. 
+Aircraft type: the use of coaxial counter-rotating rotors saves space compared with the use of an anti-torque rotor. 
 
-### Énergie: 
+### Energy: 
 
-L'énergie est le principal facteur limitant concernant les capacités de l'hélicoptère. L'énergie nécessaire pour la propulsion, le fonctionnement des capteurs (altimètre, caméra), les résistances chauffantes (chargées de maintenir les différents systèmes à une température compatible avec les contraintes de fonctionnement durant la nuit martienne), l'avionique, les processeurs et le système de télécommunication est fournie par six accumulateurs lithium-ion, d'une capacité de 36 Watts-h rechargés par des cellules photovoltaïques (surface active de 544 cm^2).
+Energy is the main limiting factor concerning the helicopter's capabilities. The energy required for propulsion, sensor operation (altimeter, camera), heating resistors (responsible for maintaining the various systems at a temperature compatible with the operating constraints during the Martian night), avionics, processors and the telecommunications system is supplied by six lithium-ion accumulators, with a capacity of 36 Watts-h recharged by photovoltaic cells (active surface area of 544 cm^2).
 
-### Capteurs: 
+### Sensors: 
 
-- une caméra de navigation
-- 2 centrales à inertie 3 axes (accélération et vitesse de rotation)
-- inclinomètre 2 axes
-- altimètre
+- a navigation camera
+- 2 3-axis inertial units (acceleration and rotation speed)
+- 2-axis inclinometer
+- altimeter
 
-### Télécommunication: 
+### Telecommunications: 
 
-Compte tenu du délais de communication Mars-Terre (une dizaine de minutes dans des conditions favorables), l'hélicoptère vol de manière autonome en appliquant des instructions transmises au préalable. En vol, l'hélicoptère ne reçoit pas mais émet pour communiquer les données collectées. 
+Given the time taken for Mars-to-Earth communication (around ten minutes in favorable conditions), the helicopter flies autonomously, applying instructions transmitted beforehand. In flight, the helicopter does not receive, but transmits the data it has collected. 
 
-### Avionique et processeurs:
+### Avionics and processors:
 
-L'avionique est répartie sur 5 circuits imprimés, dont 4 forment les côtés du fuselage cubique et le cinquième sa partie intèrieure. L'ordinateur embarqué utilise un microporcesseur Snapdragon cadencé à 2,26 Ghz et doté d'une mémoire vive de 2 Go et d'une mémoire flash de 32 Go. L'ordinateur prend en charge la fonction de navigation et pilote les rotors via deux microcontroleurs redondants. Le logiciel qui tourne sur le microporcesseur est assisité par un circuit intégré de type FPGA, qui prend en charge certaines fonctionnalités comme le contrôle d'altitiude, la gestion des entrées-sorties sur la centrale à inertie, de l'altimètre et de l'inclinomètre, et la gestion des télécommunications. Le FPGA est une version militarisée du ProASIC3L de MicroSemi. Le système d'exploitation est GNU/Linux. 
+The avionics are distributed over 5 circuit boards, 4 of which form the sides of the cubic fuselage and the fifth the inside. The on-board computer uses a Snapdragon microprocessor clocked at 2.26 GHz, with 2 GB RAM and 32 GB flash memory. The computer supports the navigation function and controls the rotors via two redundant microcontrollers. The software running on the microprocessor is supported by an FPGA-type integrated circuit, which handles functions such as altitiude control, I/O management of the inertial unit, altimeter and inclinometer, and telecommunications management. The FPGA is a militarized version of MicroSemi's ProASIC3L. The operating system is GNU/Linux. 
 
 
 
