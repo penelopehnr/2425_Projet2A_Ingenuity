@@ -34,7 +34,7 @@ while True:
     elif message.lower() == 'set_height':
         height = float(input("Set a height : "))
         print("Height sent.",height)
-        mess_height = "height="+str(height)
+        mess_height = "@"+"height="+str(height)+"#"
         client_socket.send(mess_height.encode())   
 
     else :
