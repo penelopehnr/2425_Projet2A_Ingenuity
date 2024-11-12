@@ -9592,6 +9592,15 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" " LGA-14L"
+			(at 228.6 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "9"
 			(uuid "86fedccf-ab99-4c56-aaa2-59492b9d70d4")
 		)
@@ -9983,7 +9992,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "4e22222f-7ae6-4836-9e2b-80002f8e2b65")
 		(property "Reference" "TP1"
@@ -11773,6 +11782,15 @@
 		)
 		(property "Description" ""
 			(at 43.18 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "173950536"
+			(at 43.18 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14267,7 +14285,7 @@
 				)
 			)
 		)
-		(property "Value" "BU33..."
+		(property "Value" "BU33TD3WG"
 			(at 165.1 130.81 0)
 			(effects
 				(font
@@ -14294,6 +14312,15 @@
 			)
 		)
 		(property "Description" "150mA Low-dropout Voltage Regulator, Vout 3.3V, Vin up to 6V, SOT23-5"
+			(at 165.1 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "BU33TD3WG-TR"
 			(at 165.1 137.16 0)
 			(effects
 				(font
