@@ -9592,7 +9592,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" " LGA-14L"
+		(property "MPN" " LSM6DSMTR"
 			(at 228.6 120.65 0)
 			(effects
 				(font
