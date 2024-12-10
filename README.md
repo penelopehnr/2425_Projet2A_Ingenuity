@@ -1,6 +1,6 @@
 # 2425_Projet2A_Ingenuity
 
-Students : 
+**Students :**
 
 - Pénélope HENNER - penelope.henner@ensea.fr
 - Kavin DUGARD - kevin.dugard@ensea.fr 
@@ -8,7 +8,7 @@ Students :
 - Joel COLASO - joel.colaso@ensea.fr
 
 
-Project background:
+## Project background:
 
 Mars 2020 is a space mission to deploy the Perseverance rover on the Martian surface to study its surface and collect soil samples. It is the first of a series of three missions whose ultimate aim is to return these samples to Earth for analysis.
 
@@ -26,7 +26,7 @@ Ingenuity has opened up new prospects for Mars exploration. NASA and ESA, as par
 
 ![Ingenuity picture](https://github.com/joel-colaso/2324_Projet1AB_-ingenuity-/assets/161329228/e31ebabd-f48c-485a-bf0c-799dc236c984)
 
-Description of repo structure:
+## Description of repo structure:
 
 ```
 .
@@ -43,6 +43,8 @@ Description of repo structure:
 ├── Hardware
 │   ├── KiCAD
 │   │   ├── BOM.csv
+│   │   ├── BOMv2.csv
+│   │   ├── BOMv3.csv
 │   │   ├── Ingenuity-2024-10-08_151421.zip
 │   │   ├── Ingenuity-backups
 │   │   │   ├── Ingenuity-2024-10-22_171040.zip
@@ -51,7 +53,17 @@ Description of repo structure:
 │   │   │   ├── Ingenuity-2024-10-22_173410.zip
 │   │   │   ├── Ingenuity-2024-10-22_174615.zip
 │   │   │   ├── Ingenuity-2024-11-05_145632.zip
-│   │   │   └── Ingenuity-2024-11-05_150528.zip
+│   │   │   ├── Ingenuity-2024-11-05_150528.zip
+│   │   │   ├── Ingenuity-2024-11-05_151113.zip
+│   │   │   ├── Ingenuity-2024-11-05_193304.zip
+│   │   │   ├── Ingenuity-2024-11-06_155747.zip
+│   │   │   ├── Ingenuity-2024-11-11_232102.zip
+│   │   │   ├── Ingenuity-2024-11-12_145402.zip
+│   │   │   ├── Ingenuity-2024-11-12_150233.zip
+│   │   │   ├── Ingenuity-2024-11-12_155449.zip
+│   │   │   ├── Ingenuity-2024-11-12_170709.zip
+│   │   │   ├── Ingenuity-2024-11-12_173056.zip
+│   │   │   └── Ingenuity-2024-11-19_144244.zip
 │   │   ├── Ingenuity.kicad_pcb
 │   │   ├── Ingenuity.kicad_prl
 │   │   ├── Ingenuity.kicad_pro
@@ -228,13 +240,15 @@ Description of repo structure:
 
 ``````
 
-
-Description of files: TO DO
-
-Env used: 
+## Env used: 
 
 - Kicad 
 - Python 
 - STM32 CubeIDE
 
-Packages req: TO DO
+## Mini-Ingenuity on the 3/12/24
+
+![picture mini ingenuity]()
+
+
+
