@@ -248,7 +248,7 @@ Ingenuity has opened up new prospects for Mars exploration. NASA and ESA, as par
 
 ## Mini-Ingenuity on the 3/12/24
 
-![picture mini ingenuity]()
+![picture mini ingenuity](https://github.com/penelopehnr/2425_Projet2A_Ingenuity/blob/main/Assets/IMG_4471.HEIC)
 
 
 
