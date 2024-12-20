@@ -21,6 +21,11 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "motor.h"
+#include "decodeInstruction.h"
+#include "stdio.h"
+#include "stdlib.h"
+#include "math.h"
 
 /* USER CODE END Includes */
 
@@ -70,6 +75,50 @@ static void MX_USART2_UART_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+int __io_putchar(int ch)
+{
+  HAL_UART_Transmit(&huart1, (uint8_t *)&ch, 1, HAL_MAX_DELAY);
+  return ch;
+}
+
+int __io_getchar(void)
+{
+  uint8_t ch = 0;
+  __HAL_UART_CLEAR_OREFLAG(&huart1);
+  HAL_UART_Receive(&huart1, (uint8_t *)&ch, 1, HAL_MAX_DELAY);
+  HAL_UART_Transmit(&huart1, (uint8_t *)&ch, 1, HAL_MAX_DELAY);
+  return ch;
+}
+
+
+char startChar = '@';
+char endChar = '#';
+
+uint8_t rx_char; // Variable to store the received character
+
+char instruction[200];
+int indexInstruction = 0;
+
+int UARTReceiverState = 0;
+
+volatile int flagUART1 = 0;
+
+
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
+	// Re-enable UART interrupt reception
+	HAL_UART_Receive_IT(&huart2, &rx_char, 1);
+
+	instruction[indexInstruction] = rx_char;
+	indexInstruction++;
+
+	if (rx_char == '#')
+	{
+		instruction[indexInstruction] = 0; // 0 character for the printf
+		indexInstruction = 0;
+		flagUART1 = 1;
+	}
+}
+
 
 /* USER CODE END 0 */
 
@@ -81,6 +130,7 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
+
 
   /* USER CODE END 1 */
 
@@ -110,12 +160,91 @@ int main(void)
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 
+
+	printf("--------------EXECUTION BEGINS--------------\r\n\n");
+
+	// We define the dictionary of variables that can get modified by receiving a UART signal
+	float height = 0.0;
+	float LEDState = 0.0;
+	char* variableNames[2] = {"height", "LEDState"};
+	float* variablePointers[2] = {&height, &LEDState};
+	DictOfFloatVariables dictOfVariables = {
+		.n = 2,
+		.variableNames = variableNames,
+		.variables = variablePointers
+	};
+
+
+
+	// Test to check if applyLabelValue works correctly
+	/*
+	LabelValue lv_test = {
+	    .label = "height",
+	    .value = 5.16,
+	};
+	printf("height = %f\r\n", height);
+	applyLabelValue(lv_test, dictOfVariables);
+	printf("height = %f\r\n", height);
+	 */
+
+
+
+	// Test of one motor: initialisation, setting the power to different values, turning off the motor
+	/*
+	moteur upperMotor;
+	upperMotor.htim = &htim2;
+	upperMotor.channel = TIM_CHANNEL_1;
+	MOTEUR_Init(&upperMotor);
+
+	printf("START OF TEST+++++++++++++++");
+
+	MOTEUR_SetPower(&upperMotor, 30);
+	HAL_Delay(5000);
+	MOTEUR_TurnOff(&upperMotor);
+
+	HAL_Delay(5000);
+
+	MOTEUR_SetPower(&upperMotor, 50);
+	HAL_Delay(5000);
+	MOTEUR_TurnOff(&upperMotor);
+
+	printf("END OF TEST++++++++++++++++");
+	*/
+
+
+	// Important, initiate character reception.
+	// This line also being in HAL_UART_RxCpltCallback's body ensures continuous reception
+	HAL_UART_Receive_IT(&huart1, &rx_char, 1);
+
+
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  // This is a test to check that instructions can correctly be received
+	  // by UART and affect change (modified variables, LED toggled)
+	  if (flagUART1 == 1) {
+		  printf("instruction = %s\r\n", instruction);
+
+		  flagUART1 = 0;
+
+		  LabelValue lv = checkInstruction(instruction);
+		  printLabelValue(lv);
+
+		  printf("height = %f\r\n", height);
+		  applyLabelValue(lv, dictOfVariables);
+		  printf("height = %f\r\n", height);
+
+		  // This will not be the final use of height, it is just a test
+		  if(height >= 1) {
+			  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_15, GPIO_PIN_SET);
+		  } else {
+			  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_15, GPIO_PIN_RESET);
+		  }
+	  }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -146,7 +275,12 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.MSIState = RCC_MSI_ON;
   RCC_OscInitStruct.MSICalibrationValue = 0;
   RCC_OscInitStruct.MSIClockRange = RCC_MSIRANGE_6;
-  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
+  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_MSI;
+  RCC_OscInitStruct.PLL.PLLM = 1;
+  RCC_OscInitStruct.PLL.PLLN = 40;
+  RCC_OscInitStruct.PLL.PLLQ = RCC_PLLQ_DIV2;
+  RCC_OscInitStruct.PLL.PLLR = RCC_PLLR_DIV2;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
     Error_Handler();
@@ -156,12 +290,12 @@ void SystemClock_Config(void)
   */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
-  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_MSI;
+  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_0) != HAL_OK)
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_4) != HAL_OK)
   {
     Error_Handler();
   }
@@ -250,7 +384,7 @@ static void MX_I2C1_Init(void)
 
   /* USER CODE END I2C1_Init 1 */
   hi2c1.Instance = I2C1;
-  hi2c1.Init.Timing = 0x00000E14;
+  hi2c1.Init.Timing = 0x10909CEC;
   hi2c1.Init.OwnAddress1 = 0;
   hi2c1.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
   hi2c1.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
@@ -342,9 +476,9 @@ static void MX_TIM2_Init(void)
 
   /* USER CODE END TIM2_Init 1 */
   htim2.Instance = TIM2;
-  htim2.Init.Prescaler = 0;
+  htim2.Init.Prescaler = 80;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim2.Init.Period = 4294967295;
+  htim2.Init.Period = 19999;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_Base_Init(&htim2) != HAL_OK)

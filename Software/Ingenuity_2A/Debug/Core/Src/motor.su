@@ -1,0 +1,4 @@
+../Core/Src/motor.c:22:5:percentageToMicrosecondsAtHighState	24	static
+../Core/Src/motor.c:30:6:motor_SetPower	24	static
+../Core/Src/motor.c:43:6:motor_Init	16	static
+../Core/Src/motor.c:59:6:motor_TurnOff	16	static
