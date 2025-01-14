@@ -266,7 +266,7 @@ Our project is to try and make this helicopter in miniature mode. In other words
 - Creating the notice for the Python code
 - Continuation of KiCad modelling (routing)
 
-# Session 5
+### Session 5
 - Exporting the Bill of Materials (BOM)
 - Soldering the PCB at school
 - End of PCB soldering between sessions 5 and 6
