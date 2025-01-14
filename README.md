@@ -26,8 +26,11 @@ Ingenuity has opened up new prospects for Mars exploration. NASA and ESA, as par
 
 ![Ingenuity picture](https://github.com/joel-colaso/2324_Projet1AB_-ingenuity-/assets/161329228/e31ebabd-f48c-485a-bf0c-799dc236c984)
 
-## Description of repo structure:
+## Our project
 
+Our project is to try and make this helicopter in miniature mode. In other words, we want to create a vehicle that can move through the air and take a photo of what's happening below. To do this, we'll have a total of 10 sessions in which we'll have to mix PCBs, coding, soldering and so on.
+
+## Description of repo structure:
 ```
 .
 ├── Datasheets
@@ -236,15 +239,73 @@ Ingenuity has opened up new prospects for Mars exploration. NASA and ESA, as par
         ├── client.py
         └── server.py
 
-
-
 ``````
+
+## Logbook
+
+# Session 1
+- Start writing the ReadMe
+- Modelling of the first architecture diagram (V1)
+- Start writing the project structure
+- Search for better performing components than last year (Buck, LDO, engines, etc.)
+- Add datasheets of the final components found
+
+# Session 2
+- Reflection on the architecture diagram and modelling of V2 and V3 of it
+- Addition of new datasheets
+
+# Session 3
+- Addition of the last datasheets on Git
+- Finalisation of our architecture diagram (V4)
+- Start of KiCad modelling (schematic)
+- Start coding in C on STM32
+- Start Python code
+
+# Session 4
+- Updating the Python code
+- Creating the notice for the Python code
+- Continuation of KiCad modelling (routing)
+
+# Session 5
+- Exporting the Bill of Materials (BOM)
+- Soldering the PCB at school
+- End of PCB soldering between sessions 5 and 6
+- Translation of the Git into English between sessions 5 and 6
+
+# Session 6
+- Test that the PCB is working properly (LEDs lighting up correctly)
+- Update and continue coding in Python
+- Unsolder the Buck because we didn't have the right one and the voltage wasn't right in our PCB
+- Solder the new Buck and update the BOM
+
+# Session 7
+- Soldering a Y cable to connect the 2 drivers simultaneously 
+- Testing the drone with a GBF only
+- Test the drone with the functional PCB
+- Start of 3D modelling of our drone structure on OnShape
+- Continuation of the Python code
+- Continue with the C code
+
+# Session 8
+- Trip to the FabLab at Cergy Prefecture to use a laser cutter to cut out planks of wood to make the structure of the drone.
+
+# Session 9
+- Assembling the structure of our drone
+- Further flight tests of the drone with the drone assembled, with GBF and with the PCB 
+- Finalisation of the Git translation
+- Numerous tests on the operation of the camera connected to the RasberryPi
+
+# Session 10 (14/01/25)
+- Complete modification of the ReadMe + Translation
+- Start coding a graphical interface in Python
+- Soldering a JFT-banana cable to power the RasberryPi more efficiently and continue several tests
 
 ## Env used: 
 
 - Kicad 
 - Python 
 - STM32 CubeIDE
+- OnShape
 
 ## Mini-Ingenuity on the 3/12/24
 
