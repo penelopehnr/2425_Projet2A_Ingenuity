@@ -243,25 +243,25 @@ Our project is to try and make this helicopter in miniature mode. In other words
 
 ## Logbook
 
-# Session 1
+### Session 1
 - Start writing the ReadMe
 - Modelling of the first architecture diagram (V1)
 - Start writing the project structure
 - Search for better performing components than last year (Buck, LDO, engines, etc.)
 - Add datasheets of the final components found
 
-# Session 2
+### Session 2
 - Reflection on the architecture diagram and modelling of V2 and V3 of it
 - Addition of new datasheets
 
-# Session 3
+### Session 3
 - Addition of the last datasheets on Git
 - Finalisation of our architecture diagram (V4)
 - Start of KiCad modelling (schematic)
 - Start coding in C on STM32
 - Start Python code
 
-# Session 4
+### Session 4
 - Updating the Python code
 - Creating the notice for the Python code
 - Continuation of KiCad modelling (routing)
@@ -272,13 +272,13 @@ Our project is to try and make this helicopter in miniature mode. In other words
 - End of PCB soldering between sessions 5 and 6
 - Translation of the Git into English between sessions 5 and 6
 
-# Session 6
+### Session 6
 - Test that the PCB is working properly (LEDs lighting up correctly)
 - Update and continue coding in Python
 - Unsolder the Buck because we didn't have the right one and the voltage wasn't right in our PCB
 - Solder the new Buck and update the BOM
 
-# Session 7
+### Session 7
 - Soldering a Y cable to connect the 2 drivers simultaneously 
 - Testing the drone with a GBF only
 - Test the drone with the functional PCB
@@ -286,16 +286,16 @@ Our project is to try and make this helicopter in miniature mode. In other words
 - Continuation of the Python code
 - Continue with the C code
 
-# Session 8
+### Session 8
 - Trip to the FabLab at Cergy Prefecture to use a laser cutter to cut out planks of wood to make the structure of the drone.
 
-# Session 9
+### Session 9
 - Assembling the structure of our drone
 - Further flight tests of the drone with the drone assembled, with GBF and with the PCB 
 - Finalisation of the Git translation
 - Numerous tests on the operation of the camera connected to the RasberryPi
 
-# Session 10 (14/01/25)
+### Session 10 (14/01/25)
 - Complete modification of the ReadMe + Translation
 - Start coding a graphical interface in Python
 - Soldering a JFT-banana cable to power the RasberryPi more efficiently and continue several tests
