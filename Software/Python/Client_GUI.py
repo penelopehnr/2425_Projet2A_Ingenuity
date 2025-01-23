@@ -1,3 +1,5 @@
+#cd C:\Users\kevin\Desktop\GitHub\2425_Projet2A_Ingenuity\Software\Python\PyQt6_Temp ; python3 TempFus.py
+
 import sys
 import pygame  # Pour jouer des sons
 import socket  # Pour gérer la connexion réseau
@@ -93,9 +95,9 @@ class MyWindow(QWidget):
         button_layout.setAlignment(Qt.AlignmentFlag.AlignCenter)
         button_layout.setSpacing(140)
 
-        self.add_button("Launch", "Launch.mp3", button_layout)
-        self.add_button("Height", "Height.mp3", button_layout)
-        self.add_button("Photo", "Photo.mp3", button_layout)
+        self.add_button("Launch", "sounds/Launch.mp3", button_layout)
+        self.add_button("Height", "sounds/Height.mp3", button_layout)
+        self.add_button("Photo", "sounds/Photo.mp3", button_layout)
 
         self.main_layout.addLayout(button_layout)
 
@@ -104,7 +106,7 @@ class MyWindow(QWidget):
 
         self.setLayout(self.main_layout)
 
-    def update_background(self, image_path="NotConnected.png"):
+    def update_background(self, image_path="img/NotConnected.png"):
         pixmap = QPixmap(image_path)
         if not pixmap.isNull():
             self.background_label.setPixmap(pixmap.scaled(self.size(), Qt.AspectRatioMode.KeepAspectRatioByExpanding))
@@ -130,7 +132,7 @@ class MyWindow(QWidget):
     def launch_action(self):
         if self.connection_status == "Connected!":
             self.background_toggle = not self.background_toggle
-            self.update_background("ConnectedLaunch.png" if self.background_toggle else "ConnectedNoLaunch.png")
+            self.update_background("img/ConnectedLaunch.png" if self.background_toggle else "img/ConnectedNoLaunch.png")
             self.display_label.setText("Take-off" if self.background_toggle else "Landing")
 
     def open_height_dialog(self):
@@ -155,7 +157,7 @@ class MyWindow(QWidget):
 
     def connect_to_server(self):
         self.connection_status = "Connecting..."
-        self.update_background("Connexion.png")  # Met l'image de fond à "Connexion.png" pendant la connexion
+        self.update_background("img/Connexion.png")  # Met l'image de fond à "Connexion.png" pendant la connexion
         self.connection_label.setText(self.connection_status)
         QApplication.processEvents()  # Mettre à jour l'interface immédiatement
 
@@ -163,12 +165,12 @@ class MyWindow(QWidget):
             self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             self.socket.connect(self.server_address)
             self.connection_status = "Connected!"
-            self.update_background("ConnectedNoLaunch.png")
+            self.update_background("img/ConnectedNoLaunch.png")
             self.connect_button.setText("Disconnect")
         except (socket.timeout, ConnectionRefusedError, socket.error) as e:
             self.connection_status = "Connexion Failed"
             self.connection_label.setText(self.connection_status)
-            self.update_background("ConnexionFailed.png")
+            self.update_background("img/ConnexionFailed.png")
             QTimer.singleShot(5000, self.reset_connection_status)  # Réinitialiser après 5 secondes
             print("fail")
             return
@@ -193,7 +195,7 @@ class MyWindow(QWidget):
         """Réinitialise l'état à 'Not Connected'."""
         self.connection_status = "Not Connected"
         self.connection_label.setText(self.connection_status)
-        self.update_background("NotConnected.png")  # Réinitialiser l'image de fond
+        self.update_background("img/NotConnected.png")  # Réinitialiser l'image de fond
 
     def resizeEvent(self, event):
         self.update_background()
