@@ -1,72 +1,115 @@
 import sys
 import pygame  # Importer pygame pour gérer le son
-from PyQt6.QtWidgets import QApplication, QWidget, QPushButton, QVBoxLayout, QHBoxLayout, QLabel, QSpacerItem, QSizePolicy
+from PyQt6.QtWidgets import QApplication, QWidget, QPushButton, QVBoxLayout, QHBoxLayout, QLabel, QSpacerItem, QSizePolicy, QDialog, QLineEdit, QFormLayout, QDialogButtonBox
 from PyQt6.QtGui import QPixmap
-from PyQt6.QtGui import QIcon, QKeyEvent
+from PyQt6.QtGui import QKeyEvent
 from PyQt6.QtCore import Qt
+
+
+class HeightDialog(QDialog):
+    """Boîte de dialogue pour entrer la hauteur."""
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.setWindowTitle("Set Height")
+        self.setFixedSize(300, 150)  # Taille fixe pour la boîte de dialogue
+        self.height_chosen = None  # Variable pour stocker la hauteur
+
+        # Layout principal
+        layout = QFormLayout()
+
+        # Champ de saisie pour entrer la hauteur
+        self.input_field = QLineEdit(self)
+        self.input_field.setPlaceholderText("Enter an integer")
+        layout.addRow("Height:", self.input_field)
+
+        # Boutons OK/Annuler
+        button_box = QDialogButtonBox(QDialogButtonBox.StandardButton.Ok | QDialogButtonBox.StandardButton.Cancel)
+        button_box.accepted.connect(self.accept_dialog)
+        button_box.rejected.connect(self.reject)
+        layout.addWidget(button_box)
+
+        self.setLayout(layout)
+
+    def accept_dialog(self):
+        """Valider l'entrée si elle est un entier."""
+        input_text = self.input_field.text()
+        if input_text.isdigit():  # Vérifier si c'est un entier positif
+            self.height_chosen = int(input_text)
+            self.accept()
+        else:
+            self.input_field.setText("")  # Réinitialiser le champ en cas d'entrée non valide
+            self.input_field.setPlaceholderText("Invalid input, try again")
+
 
 class MyWindow(QWidget):
     def __init__(self):
         super().__init__()
         self.command = ""  # Initialiser la variable command
         self.background_label = QLabel(self)  # Label pour le fond
-        self.displayed_image = QLabel(self)  # Label pour afficher l'image entre les boutons et le texte
+        self.background_toggle = False  # Variable pour alterner entre les deux fonds
+        self.height_chosen = None  # Variable pour stocker la hauteur choisie
         self.build_ui()
         pygame.mixer.init()  # Initialiser le module audio de Pygame
 
     def build_ui(self):
         # Configurer la fenêtre principale
-        self.setWindowTitle("Button Click Display")
+        self.setWindowTitle("Control Panel")
         self.showFullScreen()  # Fenêtre en plein écran
 
         # Charger l'image de fond
         self.update_background()
 
         # Layout principal
-        main_layout = QVBoxLayout()
-        main_layout.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        main_layout.setContentsMargins(50, 50, 50, 50)  # Marges générales
+        self.main_layout = QVBoxLayout()
+        self.main_layout.setAlignment(Qt.AlignmentFlag.AlignTop)  # Aligner les widgets en haut
+        self.main_layout.setContentsMargins(10, 10, 10, 10)  # Marges de la fenêtre principale
 
-        # Spacer pour centrer verticalement le texte
-        spacer_top = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
-        spacer_bottom = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
-
-        # Ajouter un espace au-dessus et en-dessous du texte pour le centrer
-        main_layout.addItem(spacer_top)
+        # Ajouter un espace flexible pour déplacer le texte plus bas ou plus haut
+        self.spacer_top = QSpacerItem(20, 100, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
+        self.main_layout.addItem(self.spacer_top)
 
         # Label pour afficher le texte en grand
         self.display_label = QLabel("", self)
-        self.display_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        self.display_label.setStyleSheet("font-size: 36px; color: #333;")
-        main_layout.addWidget(self.display_label)
+        self.display_label.setAlignment(Qt.AlignmentFlag.AlignHCenter | Qt.AlignmentFlag.AlignTop)  # Aligner en haut au centre
+        self.display_label.setStyleSheet("""
+            font-size: 75px;
+            color: #ffffffff;
+            background-color: transparent;  /* Légère transparence sur le fond du texte pour le faire ressortir */
+        """)
+        self.display_label.setFixedHeight(100)  # Fixer une hauteur pour éviter que le layout change
+        self.main_layout.addWidget(self.display_label)
 
-        # Ajouter un espace flexible en bas pour pousser le texte vers le centre
-        main_layout.addItem(spacer_bottom)
-
-        # Ajouter un label pour l'image à afficher après avoir cliqué
-        self.displayed_image.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        main_layout.addWidget(self.displayed_image)
+        # Ajouter un espace flexible au-dessus des boutons
+        spacer_middle = QSpacerItem(20, 20, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
+        self.main_layout.addItem(spacer_middle)
 
         # Layout horizontal pour les boutons
         button_layout = QHBoxLayout()
-        button_layout.setSpacing(200)  # Espacement entre les boutons
+        button_layout.setAlignment(Qt.AlignmentFlag.AlignCenter)  # Centrer les boutons horizontalement
+        button_layout.setSpacing(140)  # Espacement entre les boutons
 
         # Ajouter les boutons avec des textes et associer les sons
-        self.add_button("Set Height", "Height.mp3", "1.png", button_layout)
-        self.add_button("Launch", "Launch.mp3", "2.png", button_layout)
-        self.add_button("Picture", "Photo.mp3", "3.png", button_layout)
+        self.add_button("Launch", "Launch.mp3", button_layout)
+        self.add_button("Height", "Height.mp3", button_layout)
+        self.add_button("Photo", "Photo.mp3", button_layout)
 
-        # Ajouter un espace flexible réduit au-dessus pour descendre les boutons
-        main_layout.addStretch(10)
-        main_layout.addLayout(button_layout)
-        main_layout.addStretch(1)  # Petit espace en bas pour ne pas les coller au bord
+        # Ajouter le layout des boutons à la fenêtre
+        self.main_layout.addLayout(button_layout)
+
+        # Ajouter un spacer fixe pour contrôler la distance depuis le bas
+        spacer_bottom = QSpacerItem(20, 45, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Fixed)
+        self.main_layout.addItem(spacer_bottom)
 
         # Appliquer le layout principal
-        self.setLayout(main_layout)
+        self.setLayout(self.main_layout)
 
     def update_background(self):
-        # Vérifier si l'image de fond existe
-        background_image_path = "Background.png"
+        # Choisir l'image de fond selon la valeur de background_toggle
+        if self.background_toggle:
+            background_image_path = "Background2.png"
+        else:
+            background_image_path = "Background1.png"
+        
         pixmap = QPixmap(background_image_path)
         if pixmap.isNull():
             print(f"Erreur : impossible de charger l'image {background_image_path}.")
@@ -75,39 +118,46 @@ class MyWindow(QWidget):
             self.background_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
             self.background_label.lower()  # Assurez-vous que l'image de fond est derrière les autres widgets
 
-    def add_button(self, name, sound_file, image_path, layout):
-        button = QPushButton(name, self)
-        button.setFixedSize(300, 150)  # Taille carrée pour les boutons
+    def add_button(self, name, sound_file, layout):
+        button = QPushButton("", self)  # Ne pas mettre de texte
+        button.setFixedSize(180, 180)  # Taille carrée pour les boutons
         button.setStyleSheet("""
-            background-color: white;
-            font-size: 16px;
-            border: 4px solid black;  /* Bordure noire et épaissie */
-            border-radius: 25px;  /* Bordures arrondies */
+            background-color: transparent;  /* Rendre le bouton transparent */
+            border: none;  /* Enlever la bordure */
         """)
-        button.clicked.connect(lambda: self.display_button_name(name, sound_file, image_path))
+        button.clicked.connect(lambda: self.display_button_name(name, sound_file))
         layout.addWidget(button)
 
-    def display_button_name(self, name, sound_file, image_path):
-        # Afficher le nom du bouton dans le label
-        self.display_label.setText(f"Command: {name}")
-        self.command = name  # Mettre à jour la variable command avec le nom du bouton
+    def display_button_name(self, name, sound_file):
+        # Si le bouton "Launch" est pressé, alterner l'image de fond et changer le texte
+        if name == "Launch":
+            self.background_toggle = not self.background_toggle  # Alterner la valeur
+            self.update_background()  # Mettre à jour l'image de fond
+            if self.background_toggle:
+                self.display_label.setText("Take-off")  # Afficher "Take-off" quand on passe à Background2
+            else:
+                self.display_label.setText("Landing")  # Afficher "Landing" quand on revient à Background1
+        
+        elif name == "Height":
+            self.open_height_dialog()  # Ouvrir la boîte de dialogue pour entrer la hauteur
+        
+        elif name == "Photo":
+            self.display_label.setText("Photo")  # Afficher "Photo" peu importe l'image de fond
+
+        # Jouer le son du bouton
         self.play_sound(sound_file)  # Jouer le son du bouton
-        self.display_image(image_path)  # Afficher l'image associée au bouton
-        print(self.command)  # Afficher la valeur de la variable command dans la console
+
+    def open_height_dialog(self):
+        """Ouvre une boîte de dialogue pour entrer une hauteur."""
+        dialog = HeightDialog(self)
+        if dialog.exec():  # Si l'utilisateur clique sur "OK"
+            self.height_chosen = dialog.height_chosen
+            self.display_label.setText(f"Height -> {self.height_chosen}m")  # Afficher la hauteur choisie
 
     def play_sound(self, sound_file):
         # Jouer le son correspondant au bouton
         pygame.mixer.music.load(sound_file)  # Charger le fichier audio
         pygame.mixer.music.play()  # Jouer le son
-
-    def display_image(self, image_path):
-        # Charger et afficher l'image correspondant au bouton cliqué
-        pixmap = QPixmap(image_path)
-        if pixmap.isNull():
-            print(f"Erreur : impossible de charger l'image {image_path}.")
-        else:
-            self.displayed_image.setPixmap(pixmap.scaled(500, 500, Qt.AspectRatioMode.KeepAspectRatio))
-            self.displayed_image.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
     def resizeEvent(self, event):
         # Redimensionner l'image de fond à chaque redimensionnement de la fenêtre
