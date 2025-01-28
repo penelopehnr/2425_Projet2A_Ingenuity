@@ -295,10 +295,18 @@ Our project is to try and make this helicopter in miniature mode. In other words
 - Finalisation of the Git translation
 - Numerous tests on the operation of the camera connected to the RasberryPi
 
-### Session 10 (14/01/25)
+### Session 10
 - Complete modification of the ReadMe + Translation
 - Start coding a graphical interface in Python
 - Soldering a JFT-banana cable to power the RasberryPi more efficiently and continue several tests
+
+### Session 11
+- Finalisation of the Python code base for the graphical user interface (GUI)
+- KiCad modification : Connection problem between the Raspberry Pi Zero and our PCB, the connector is upside down ==> vertical reversal + routing modification
+- Start of TOF code (C code)
+
+### Session 12 (28/01/2025)
+- 
 
 ## Env used: 
 
