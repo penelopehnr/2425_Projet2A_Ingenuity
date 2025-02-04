@@ -306,7 +306,13 @@ Our project is to try and make this helicopter in miniature mode. In other words
 - Start of TOF code (C code)
 
 ### Session 12 (28/01/2025)
-- 
+- Final KiCad adjustments : Optimized the PCB dimensions to match the Raspberry Pi Zero form factor, completed additional routing, and prepared the design for manufacturing
+- Continuity of TOF Code
+
+### Session 13 (04/02/2025)
+- Drone testing: Verification of connectivity and functionality between our PCB, the Raspberry Pi Zero, and the ESC drivers by simulating signals with a GBF
+- Continuity of TOF Code
+- Ongoing development of TOF code : Continued work with the code
 
 ## Env used: 
 
