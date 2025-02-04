@@ -244,75 +244,75 @@ Our project is to try and make this helicopter in miniature mode. In other words
 ## Logbook
 
 ### Session 1
-- Start writing the ReadMe
-- Modelling of the first architecture diagram (V1)
-- Start writing the project structure
-- Search for better performing components than last year (Buck, LDO, engines, etc.)
-- Add datasheets of the final components found
+- Start writing the ReadMe.
+- Modelling of the first architecture diagram (V1).
+- Start writing the project structure.
+- Search for better performing components than last year (Buck, LDO, engines, etc).
+- Add datasheets of the final components found.
 
 ### Session 2
-- Reflection on the architecture diagram and modelling of V2 and V3 of it
-- Addition of new datasheets
+- Reflection on the architecture diagram and modelling of V2 and V3 of it.
+- Addition of new datasheets.
 
 ### Session 3
-- Addition of the last datasheets on Git
-- Finalisation of our architecture diagram (V4)
-- Start of KiCad modelling (schematic)
-- Start coding in C on STM32
-- Start Python code
+- Addition of the last datasheets on Git.
+- Finalisation of our architecture diagram (V4).
+- Start of KiCad modelling (schematic).
+- Start coding in C on STM32.
+- Start Python code.
 
 ### Session 4
-- Updating the Python code
-- Creating the notice for the Python code
-- Continuation of KiCad modelling (routing)
+- Updating the Python code.
+- Creating the notice for the Python code.
+- Continuation of KiCad modelling (routing).
 
 ### Session 5
-- Exporting the Bill of Materials (BOM)
-- Soldering the PCB at school
-- End of PCB soldering between sessions 5 and 6
-- Translation of the Git into English between sessions 5 and 6
+- Exporting the Bill of Materials (BOM).
+- Soldering the PCB at school.
+- End of PCB soldering between sessions 5 and 6.
+- Translation of the Git into English between sessions 5 and 6.
 
 ### Session 6
-- Test that the PCB is working properly (LEDs lighting up correctly)
-- Update and continue coding in Python
-- Unsolder the Buck because we didn't have the right one and the voltage wasn't right in our PCB
-- Solder the new Buck and update the BOM
+- Test that the PCB is working properly (LEDs lighting up correctly).
+- Update and continue coding in Python.
+- Unsolder the Buck because we didn't have the right one and the voltage wasn't right in our PCB.
+- Solder the new Buck and update the BOM.
 
 ### Session 7
-- Soldering a Y cable to connect the 2 drivers simultaneously 
-- Testing the drone with a GBF only
-- Test the drone with the functional PCB
-- Start of 3D modelling of our drone structure on OnShape
-- Continuation of the Python code
-- Continue with the C code
+- Soldering a Y cable to connect the 2 drivers simultaneously.
+- Testing the drone with a GBF only.
+- Test the drone with the functional PCB.
+- Start of 3D modelling of our drone structure on OnShape.
+- Continuation of the Python code.
+- Continue with the C code.
 
 ### Session 8
 - Trip to the FabLab at Cergy Prefecture to use a laser cutter to cut out planks of wood to make the structure of the drone.
 
 ### Session 9
-- Assembling the structure of our drone
-- Further flight tests of the drone with the drone assembled, with GBF and with the PCB 
-- Finalisation of the Git translation
-- Numerous tests on the operation of the camera connected to the RasberryPi
+- Assembling the structure of our drone.
+- Further flight tests of the drone with the drone assembled, with GBF and with the PCB .
+- Finalisation of the Git translation.
+- Numerous tests on the operation of the camera connected to the RasberryPi.
 
 ### Session 10
-- Complete modification of the ReadMe + Translation
-- Start coding a graphical interface in Python
-- Soldering a JFT-banana cable to power the RasberryPi more efficiently and continue several tests
+- Complete modification of the ReadMe + Translation.
+- Start coding a graphical interface in Python.
+- Soldering a JFT-banana cable to power the RasberryPi more efficiently and continue several tests.
 
 ### Session 11
-- Finalisation of the Python code base for the graphical user interface (GUI)
-- KiCad modification : Connection problem between the Raspberry Pi Zero and our PCB, the connector is upside down ==> vertical reversal + routing modification
-- Start of TOF code (C code)
+- Finalisation of the Python code base for the graphical user interface (GUI).
+- KiCad modification : Connection problem between the Raspberry Pi Zero and our PCB, the connector is upside down ==> vertical reversal + routing modification.
+- Start of TOF code (C code).
 
 ### Session 12 (28/01/2025)
-- Final KiCad adjustments : Optimized the PCB dimensions to match the Raspberry Pi Zero form factor, completed additional routing, and prepared the design for manufacturing
-- Continuity of TOF Code
+- Final KiCad adjustments : Optimized the PCB dimensions to match the Raspberry Pi Zero form factor, completed additional routing, and prepared the design for manufacturing.
+- Continuity of TOF Code.
 
 ### Session 13 (04/02/2025)
-- Drone testing: Verification of connectivity and functionality between our PCB, the Raspberry Pi Zero, and the ESC drivers by simulating signals with a GBF
-- Continuity of TOF Code
-- Ongoing development of TOF code : Continued work with the code
+- Drone testing : Verification of connectivity and functionality between our PCB, the Raspberry Pi Zero, and the ESC drivers by simulating signals with a GBF. Bug fixes.
+- Drone testing and improvement of the motor control code in C: added the ability to gradually increase motor speed, either by selecting a specific speed or by using the arrow keys on the computer.
+- Ongoing development of TOF code : Continued work with the code.
 
 ## Env used: 
 
