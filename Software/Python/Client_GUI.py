@@ -143,7 +143,11 @@ class MyWindow(QWidget):
         elif name == "Height":
             self.open_height_dialog()
         elif name == "Photo":
-            self.display_label.setText("Photo")
+            self.display_label.setText("Photo en cours...")
+            self.mess_photo = 'take_photo'
+            self.socket.send(self.mess_photo.encode())
+            QTimer.singleShot(6000, lambda: self.display_label.setText("Photo prise"))
+
         
         # Joue le son associé
         self.play_sound(sound_file)
@@ -184,9 +188,7 @@ class MyWindow(QWidget):
 
         try:
             self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            print("nanan", self.socket)
             self.socket.connect((self.server_address))
-            print("nananananan")
             self.connection_status = "Connected!"
             self.update_background("img/ConnectedNoLaunch.png")
             self.connect_button.setText("Disconnect")
@@ -235,3 +237,9 @@ if __name__ == '__main__':
     window = MyWindow()
     window.show()
     sys.exit(app.exec())
+
+
+# A faire : Controler avec les flèches -> 
+# Flèche = +1
+# Ctrl + Flèche = +5
+# Sft + Flèche = +10
