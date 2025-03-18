@@ -1,0 +1,11 @@
+../Drivers/VL53L1X_ULD_API/platform/vl53l1_platform.c:61:5:_I2CWrite	40	static
+../Drivers/VL53L1X_ULD_API/platform/vl53l1_platform.c:73:5:_I2CRead	40	static
+../Drivers/VL53L1X_ULD_API/platform/vl53l1_platform.c:86:8:VL53L1_WriteMulti	32	static
+../Drivers/VL53L1X_ULD_API/platform/vl53l1_platform.c:104:8:VL53L1_ReadMulti	32	static
+../Drivers/VL53L1X_ULD_API/platform/vl53l1_platform.c:125:8:VL53L1_WrByte	24	static
+../Drivers/VL53L1X_ULD_API/platform/vl53l1_platform.c:142:8:VL53L1_WrWord	24	static
+../Drivers/VL53L1X_ULD_API/platform/vl53l1_platform.c:160:8:VL53L1_WrDWord	24	static
+../Drivers/VL53L1X_ULD_API/platform/vl53l1_platform.c:178:8:VL53L1_RdByte	24	static
+../Drivers/VL53L1X_ULD_API/platform/vl53l1_platform.c:199:8:VL53L1_RdWord	24	static
+../Drivers/VL53L1X_ULD_API/platform/vl53l1_platform.c:224:8:VL53L1_RdDWord	24	static
+../Drivers/VL53L1X_ULD_API/platform/vl53l1_platform.c:249:8:VL53L1_WaitMs	16	static
