@@ -1,0 +1,4 @@
+../Core/Src/vl53l1x.c:24:5:vl53l1x_init	32	static
+../Core/Src/vl53l1x.c:108:5:vl53l1x_clearCfg	16	static
+../Core/Src/vl53l1x.c:128:5:vl53l1x_setParameters	16	static
+../Core/Src/vl53l1x.c:148:10:vl53l1x_getDistance	24	static
