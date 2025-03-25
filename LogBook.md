@@ -1,5 +1,4 @@
 ### Session 1 (08/10/2024)
-- Start writing the ReadMe.
 - Modelling of the first architecture diagram (V1).
 - Start writing the project structure.
 - Search for better performing components than last year (Buck, LDO, engines, etc).
@@ -30,30 +29,30 @@
 ### Session 6 (26/11/2024)
 - Test that the PCB is working properly (LEDs lighting up correctly).
 - Update and continue coding in Python.
-- Unsolder the Buck because we didn't have the right one and the voltage wasn't right in our PCB.
+- Unsolder the Buck because it was not providing the correct output voltage—instead of converting 6V to 5V, it was outputting 3V, which was insufficient for our PCB.
 - Solder the new Buck and update the BOM.
 
 ### Session 7 (03/12/2024)
 - Soldering a Y cable to connect the 2 drivers simultaneously.
-- Testing the drone with a GBF only.
-- Test the drone with the functional PCB.
+- Testing the drone with a Function Generator (GBF) only.
+- Testing the drone with the functional PCB: powered the motors and performed a flight test using a function generator (GBF) instead of a battery.
 - Start of 3D modelling of our drone structure on OnShape.
 - Continuation of the Python code.
 - Continue with the C code.
 
 ### Session 8 (10/12/2024)
-- Trip to the FabLab at Cergy Prefecture to use a laser cutter to cut out planks of wood to make the structure of the drone.
+- Visit to the FabLab in Cergy to use a laser cutter for wooden drone structure components.
 
 ### Session 9 (14/12/2024)
 - Assembling the structure of our drone.
 - Further flight tests of the drone with the drone assembled, with GBF and with the PCB .
 - Finalisation of the Git translation.
-- Numerous tests on the operation of the camera connected to the RasberryPi.
+- Numerous tests on the operation of the camera connected to the Raspberry Pi.
 
 ### Session 10 (21/12/2024)
 - Complete modification of the ReadMe + Translation.
 - Start coding a graphical interface in Python.
-- Soldering a JFT-banana cable to power the RasberryPi more efficiently and continue several tests.
+- Soldering a JFT-banana cable to power the Raspberry Pi more efficiently and continue several tests.
 
 ### Session 11 (28/12/2024)
 - Finalisation of the Python code base for the graphical user interface (GUI).
@@ -81,7 +80,19 @@
 - Continued development of the C code (motor control and TOF sensor data acquisition).
 
 ### Session 16 (11/03/2025)
+- Completion of TOF sensor code and initiation of IMU coding (C language).
+- 3D modeling : Designed a protective casing for the motors and an enclosure for electronic components.
+- 3D modeling : Created custom screws and bolts in 3D to reduce weight compared to traditional metal threaded rods.
+- 3D printing of the newly designed components.
 
 ### Session 17 (18/03/2025)
+- Full drone test integrating TOF, IMU, and all C code for autonomous flight with the graphical interface.
+- Structural modification: Reduced the thickness of the wooden frame to decrease overall weight.
+- 3D printing of updated structural components.
 
 ### Session 18 (25/03/2025)
+- 3D modeling: Designed protective grilles for the propellers.
+- 3D printing of the new protective elements.
+- GitHub improvements: Refinement and restructuring of the ReadMe file.
+
+
