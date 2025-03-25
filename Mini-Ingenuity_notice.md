@@ -12,7 +12,7 @@ The microcontroller, embedded on the custom PCB, manages the drone's motors usin
 
 ![Mini Ingenuity Drone architecture](Hardware/Architecture/Architecture%20Schematic%20V4.jpg)
 
-## Structure of Mini-Ingenuity
+## Structure of Mini-Ingenuity (Hardware files)
 
 ### 3D structural parts 
  
@@ -36,7 +36,7 @@ Our wood sheets are 5 mm thick.
 
 ### Picture of the Structure 
 
-## PCB 
+## PCB (Hardware files)
 
 files concerned: `Hardware/KiCAD/...`
 
@@ -51,13 +51,20 @@ First, you will need all the required components. You can find all the necessary
 Software used: KiCad
 All the KiCad files required to build the PCB are available in this repository.
 
-## Code
+Picture of the PCB: [PCB Picture](Assets/IMG_6468.png)
+
+## Code (Software)
 
 ### Python code 
 
-### Code for the microcontroller
+files concerned: `Software/Python`
+requiered functions: `Software/Python/requirements.txt`
 
-### PINs
+### Code for the microcontroller (STM32CubeIDE)
+
+files concerned: 
+
+#### PINs
 
 ![PIN](Hardware/STM32_Pins.png)
 
