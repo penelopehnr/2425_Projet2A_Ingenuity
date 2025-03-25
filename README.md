@@ -31,215 +31,8 @@ Ingenuity has opened up new prospects for Mars exploration. NASA and ESA, as par
 Our project is to try and make this helicopter in miniature mode. In other words, we want to create a vehicle that can move through the air and take a photo of what's happening below. To do this, we'll have a total of 10 sessions in which we'll have to mix PCBs, coding, soldering and so on.
 
 ## Description of repo structure:
-```
-.
-├── Datasheets
-│   ├── MOSFET.pdf
-│   ├── RASBERRY_PI.pdf
-│   ├── REGULATEUR.pdf
-│   ├── TOF.pdf
-│   ├── datasheet_Driver_pichlerXQ30.pdf
-│   ├── datasheet_IMU.pdf
-│   ├── datasheet_LDO_BU33TD3WG.pdf
-│   └── datasheet_buck_17395xx36.pdf
-├── Firmware
-├── Hardware
-│   ├── KiCAD
-│   │   ├── BOM.csv
-│   │   ├── BOMv2.csv
-│   │   ├── BOMv3.csv
-│   │   ├── Ingenuity-2024-10-08_151421.zip
-│   │   ├── Ingenuity-backups
-│   │   │   ├── Ingenuity-2024-10-22_171040.zip
-│   │   │   ├── Ingenuity-2024-10-22_172052.zip
-│   │   │   ├── Ingenuity-2024-10-22_172850.zip
-│   │   │   ├── Ingenuity-2024-10-22_173410.zip
-│   │   │   ├── Ingenuity-2024-10-22_174615.zip
-│   │   │   ├── Ingenuity-2024-11-05_145632.zip
-│   │   │   ├── Ingenuity-2024-11-05_150528.zip
-│   │   │   ├── Ingenuity-2024-11-05_151113.zip
-│   │   │   ├── Ingenuity-2024-11-05_193304.zip
-│   │   │   ├── Ingenuity-2024-11-06_155747.zip
-│   │   │   ├── Ingenuity-2024-11-11_232102.zip
-│   │   │   ├── Ingenuity-2024-11-12_145402.zip
-│   │   │   ├── Ingenuity-2024-11-12_150233.zip
-│   │   │   ├── Ingenuity-2024-11-12_155449.zip
-│   │   │   ├── Ingenuity-2024-11-12_170709.zip
-│   │   │   ├── Ingenuity-2024-11-12_173056.zip
-│   │   │   └── Ingenuity-2024-11-19_144244.zip
-│   │   ├── Ingenuity.kicad_pcb
-│   │   ├── Ingenuity.kicad_prl
-│   │   ├── Ingenuity.kicad_pro
-│   │   ├── Ingenuity.kicad_sch
-│   │   ├── desktop.ini
-│   │   ├── fp-info-cache
-│   │   ├── gerber
-│   │   │   ├── Ingenuity-B_Cu.gbr
-│   │   │   ├── Ingenuity-B_Mask.gbr
-│   │   │   ├── Ingenuity-B_Silkscreen.gbr
-│   │   │   ├── Ingenuity-Edge_Cuts.gbr
-│   │   │   ├── Ingenuity-F_Cu.gbr
-│   │   │   ├── Ingenuity-F_Mask.gbr
-│   │   │   ├── Ingenuity-F_Paste.gbr
-│   │   │   ├── Ingenuity-F_Silkscreen.gbr
-│   │   │   ├── Ingenuity-In1_Cu.gbr
-│   │   │   ├── Ingenuity-In2_Cu - GND.gbr
-│   │   │   ├── Ingenuity-NPTH-drl_map.gbr
-│   │   │   ├── Ingenuity-NPTH.drl
-│   │   │   ├── Ingenuity-PTH-drl_map.gbr
-│   │   │   ├── Ingenuity-PTH.drl
-│   │   │   └── Ingenuity-job.gbrjob
-│   │   └── myLib.pretty
-│   │       ├── LDO_BU33TD3WG.kicad_mod
-│   │       └── wurth_17395xx36.kicad_mod
-│   ├── PIN_STM32.png
-│   ├── SchemaArchi_Ingenuity_V1.jpg
-│   ├── SchemaArchi_Ingenuity_V2.jpg
-│   ├── SchemaArchi_Ingenuity_V3.png
-│   └── SchemaArchi_Ingenuity_V4.jpg
-├── Ingenuity_Mars2020.md
-├── Output
-│   └── Matériel Projet 2A.xlsx
-├── README.md
-└── Software
-    ├── Ingenuity_2A
-    │   ├── Core
-    │   │   ├── Inc
-    │   │   │   ├── main.h
-    │   │   │   ├── stm32l4xx_hal_conf.h
-    │   │   │   └── stm32l4xx_it.h
-    │   │   ├── Src
-    │   │   │   ├── main.c
-    │   │   │   ├── stm32l4xx_hal_msp.c
-    │   │   │   ├── stm32l4xx_it.c
-    │   │   │   ├── syscalls.c
-    │   │   │   ├── sysmem.c
-    │   │   │   └── system_stm32l4xx.c
-    │   │   └── Startup
-    │   │       └── startup_stm32l412kbtx.s
-    │   ├── Drivers
-    │   │   ├── CMSIS
-    │   │   │   ├── Device
-    │   │   │   │   └── ST
-    │   │   │   │       └── STM32L4xx
-    │   │   │   │           ├── Include
-    │   │   │   │           │   ├── stm32l412xx.h
-    │   │   │   │           │   ├── stm32l4xx.h
-    │   │   │   │           │   └── system_stm32l4xx.h
-    │   │   │   │           ├── LICENSE.txt
-    │   │   │   │           ├── License.md
-    │   │   │   │           └── Source
-    │   │   │   │               └── Templates
-    │   │   │   ├── Include
-    │   │   │   │   ├── cmsis_armcc.h
-    │   │   │   │   ├── cmsis_armclang.h
-    │   │   │   │   ├── cmsis_armclang_ltm.h
-    │   │   │   │   ├── cmsis_compiler.h
-    │   │   │   │   ├── cmsis_gcc.h
-    │   │   │   │   ├── cmsis_iccarm.h
-    │   │   │   │   ├── cmsis_version.h
-    │   │   │   │   ├── core_armv81mml.h
-    │   │   │   │   ├── core_armv8mbl.h
-    │   │   │   │   ├── core_armv8mml.h
-    │   │   │   │   ├── core_cm0.h
-    │   │   │   │   ├── core_cm0plus.h
-    │   │   │   │   ├── core_cm1.h
-    │   │   │   │   ├── core_cm23.h
-    │   │   │   │   ├── core_cm3.h
-    │   │   │   │   ├── core_cm33.h
-    │   │   │   │   ├── core_cm35p.h
-    │   │   │   │   ├── core_cm4.h
-    │   │   │   │   ├── core_cm7.h
-    │   │   │   │   ├── core_sc000.h
-    │   │   │   │   ├── core_sc300.h
-    │   │   │   │   ├── mpu_armv7.h
-    │   │   │   │   ├── mpu_armv8.h
-    │   │   │   │   └── tz_context.h
-    │   │   │   └── LICENSE.txt
-    │   │   └── STM32L4xx_HAL_Driver
-    │   │       ├── Inc
-    │   │       │   ├── Legacy
-    │   │       │   │   └── stm32_hal_legacy.h
-    │   │       │   ├── stm32l4xx_hal.h
-    │   │       │   ├── stm32l4xx_hal_adc.h
-    │   │       │   ├── stm32l4xx_hal_adc_ex.h
-    │   │       │   ├── stm32l4xx_hal_cortex.h
-    │   │       │   ├── stm32l4xx_hal_def.h
-    │   │       │   ├── stm32l4xx_hal_dma.h
-    │   │       │   ├── stm32l4xx_hal_dma_ex.h
-    │   │       │   ├── stm32l4xx_hal_exti.h
-    │   │       │   ├── stm32l4xx_hal_flash.h
-    │   │       │   ├── stm32l4xx_hal_flash_ex.h
-    │   │       │   ├── stm32l4xx_hal_flash_ramfunc.h
-    │   │       │   ├── stm32l4xx_hal_gpio.h
-    │   │       │   ├── stm32l4xx_hal_gpio_ex.h
-    │   │       │   ├── stm32l4xx_hal_i2c.h
-    │   │       │   ├── stm32l4xx_hal_i2c_ex.h
-    │   │       │   ├── stm32l4xx_hal_pwr.h
-    │   │       │   ├── stm32l4xx_hal_pwr_ex.h
-    │   │       │   ├── stm32l4xx_hal_rcc.h
-    │   │       │   ├── stm32l4xx_hal_rcc_ex.h
-    │   │       │   ├── stm32l4xx_hal_spi.h
-    │   │       │   ├── stm32l4xx_hal_spi_ex.h
-    │   │       │   ├── stm32l4xx_hal_tim.h
-    │   │       │   ├── stm32l4xx_hal_tim_ex.h
-    │   │       │   ├── stm32l4xx_hal_uart.h
-    │   │       │   ├── stm32l4xx_hal_uart_ex.h
-    │   │       │   ├── stm32l4xx_ll_adc.h
-    │   │       │   ├── stm32l4xx_ll_bus.h
-    │   │       │   ├── stm32l4xx_ll_cortex.h
-    │   │       │   ├── stm32l4xx_ll_crs.h
-    │   │       │   ├── stm32l4xx_ll_dma.h
-    │   │       │   ├── stm32l4xx_ll_dmamux.h
-    │   │       │   ├── stm32l4xx_ll_exti.h
-    │   │       │   ├── stm32l4xx_ll_gpio.h
-    │   │       │   ├── stm32l4xx_ll_i2c.h
-    │   │       │   ├── stm32l4xx_ll_lpuart.h
-    │   │       │   ├── stm32l4xx_ll_pwr.h
-    │   │       │   ├── stm32l4xx_ll_rcc.h
-    │   │       │   ├── stm32l4xx_ll_spi.h
-    │   │       │   ├── stm32l4xx_ll_system.h
-    │   │       │   ├── stm32l4xx_ll_tim.h
-    │   │       │   ├── stm32l4xx_ll_usart.h
-    │   │       │   └── stm32l4xx_ll_utils.h
-    │   │       ├── LICENSE.txt
-    │   │       └── Src
-    │   │           ├── stm32l4xx_hal.c
-    │   │           ├── stm32l4xx_hal_adc.c
-    │   │           ├── stm32l4xx_hal_adc_ex.c
-    │   │           ├── stm32l4xx_hal_cortex.c
-    │   │           ├── stm32l4xx_hal_dma.c
-    │   │           ├── stm32l4xx_hal_dma_ex.c
-    │   │           ├── stm32l4xx_hal_exti.c
-    │   │           ├── stm32l4xx_hal_flash.c
-    │   │           ├── stm32l4xx_hal_flash_ex.c
-    │   │           ├── stm32l4xx_hal_flash_ramfunc.c
-    │   │           ├── stm32l4xx_hal_gpio.c
-    │   │           ├── stm32l4xx_hal_i2c.c
-    │   │           ├── stm32l4xx_hal_i2c_ex.c
-    │   │           ├── stm32l4xx_hal_pwr.c
-    │   │           ├── stm32l4xx_hal_pwr_ex.c
-    │   │           ├── stm32l4xx_hal_rcc.c
-    │   │           ├── stm32l4xx_hal_rcc_ex.c
-    │   │           ├── stm32l4xx_hal_spi.c
-    │   │           ├── stm32l4xx_hal_spi_ex.c
-    │   │           ├── stm32l4xx_hal_tim.c
-    │   │           ├── stm32l4xx_hal_tim_ex.c
-    │   │           ├── stm32l4xx_hal_uart.c
-    │   │           └── stm32l4xx_hal_uart_ex.c
-    │   ├── Ingenuity_2A.ioc
-    │   └── STM32L412KBTX_FLASH.ld
-    └── Python
-        ├── Codes temporaires
-        │   ├── Clav.py
-        │   ├── Clav2.py
-        │   ├── Tempo.py
-        │   └── test.py
-        ├── Notice.md
-        ├── client.py
-        └── server.py
 
-``````
+--
 
 ## Logbook
 
@@ -325,16 +118,49 @@ Our project is to try and make this helicopter in miniature mode. In other words
 - Development of new features for the Python GUI code.
 - Continued development of the C code (motor control and TOF sensor data acquisition).
 
-## Env used: 
+--
 
-- Kicad 
-- Python 
-- STM32 CubeIDE
-- OnShape
+## Environments used: 
 
-## Mini-Ingenuity on the 3/12/24
+### Machines Used
+- **PC (Windows/macOS/Linux)**: Used for development (STM32CubeIDE, Python, OnShape, etc.).
+- **Function Generator (GBF)**: Used to simulate control signals during motor testing.
+- **Laser Cutter (FabLab)**: Used to cut the wooden drone structure.
 
-![picture mini ingenuity](https://github.com/penelopehnr/2425_Projet2A_Ingenuity/blob/main/Assets/Drone.png)
+
+### Hardware
+- **Raspberry Pi Zero**: A single-board computer used for image capture, PCB interfacing, and running Python scripts.
+- **STM32L412KBT6**: Main microcontroller used on the custom PCB.
+- **VL53L1X**: Time-of-Flight (ToF) distance sensor.
+- **ESC (Electronic Speed Controllers)**: To control brushless motors.
+- **Brushless Motors**: Used to generate drone thrust.
+- **LDO BU33TD3WG**: Low-dropout voltage regulator.
+- **Buck Converter 17395xx36**: DC-DC converter used to step down voltage.
+- **MOSFETs**: Used for power switching and motor control.
+- **Camera (connected to Raspberry Pi)**: Captures aerial images.
+
+
+### Software
+#### Embedded Development
+- **STM32CubeIDE**: Used to write, compile, and flash firmware to the microcontroller.
+- **STM32 HAL Drivers**: Low-level drivers for managing STM32 peripherals.
+
+#### Electronic Design
+- **KiCad**: Used for circuit schematic design, PCB layout, and Gerber/BOM export.
+- **OnShape**: Used for 3D modeling of the drone structure.
+
+#### Python Development
+- **Python 3**: Used for drone communication scripts and the graphical user interface (GUI).
+- **Tkinter / PyQt / Other** *(to be confirmed)*: Used to build the GUI interface.
+- **Pygame / Other sound libraries** *(optional)*: For playing feedback sounds (from the `sounds/` folder).
+- **Flask / TCP Sockets** *(if used in `server.py`/`client.py`)*: For communication between the GUI and the drone *(to confirm)*.
+
+---
+
+
+## Picture of Mini-Ingenuity 
+
+
 
 
 
