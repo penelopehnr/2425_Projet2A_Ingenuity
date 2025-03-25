@@ -56,6 +56,47 @@ The **Software** folder contains:
 - The **TOF code** (developed with STM32CubeIDE), which is responsible for sending the drone’s altitude using a Time-of-Flight sensor.
 - The **C code** (also under STM32CubeIDE) in `Ingenuity_2A`, running on the STM32 microcontroller, which receives commands from the Raspberry Pi and manages the components such as motors, TOF sensor, etc.
 
+## Environments used: 
+
+### Machines Used
+- **PC (Windows/macOS/Linux)**: Used for development (STM32CubeIDE, Python, OnShape, etc.).
+- **Function Generator (GBF)**: Used to simulate control signals during motor testing.
+- **Laser Cutter (FabLab)**: Used to cut the wooden drone structure.
+
+### Hardware
+- **Raspberry Pi Zero**: A single-board computer used for image capture, PCB interfacing, and running Python scripts.
+- **STM32L412KBT6**: Main microcontroller used on the custom PCB.
+- **VL53L1X**: Time-of-Flight (ToF) distance sensor.
+- **ESC (Electronic Speed Controllers)**: To control brushless motors.
+- **Brushless Motors**: Used to generate drone thrust.
+- **LDO BU33TD3WG**: Low-dropout voltage regulator.
+- **Buck Converter 17395xx36**: DC-DC converter used to step down voltage.
+- **MOSFETs**: Used for power switching and motor control.
+- **Camera (connected to Raspberry Pi)**: Captures aerial images.
+
+### Software
+#### Embedded Development
+- **STM32CubeIDE**: Used to write, compile, and flash firmware to the microcontroller.
+- **STM32 HAL Drivers**: Low-level drivers for managing STM32 peripherals.
+
+#### Electronic Design
+- **KiCad**: Used for circuit schematic design, PCB layout, and Gerber/BOM export.
+- **OnShape**: Used for 3D modeling of the drone structure.
+
+#### Python Development
+- **Python 3**: Used for drone communication scripts and the graphical user interface (GUI).
+- **Tkinter / PyQt**: Used to build the GUI interface.
+- **Pygame / Other sound libraries**: For playing feedback sounds (from the `sounds/` folder).
+- **Flask / TCP Sockets**: For communication between the GUI and the drone.
+
+## Precision on the TOF VL53L1X
+
+Start by copying the ```VL53L1X_ULD_API``` in your project. You want to configure the paths in your IDE (eg. in STM32CubeIDE : ```Project > Properties``` then ```C/C++ General > Paths and Symbols```).
+
+Don't forget to set the XSDN pin high before everything else. For instance :
+```C
+HAL_GPIO_WritePin(XSDN_GPIO_Port, XSDN_Pin, GPIO_PIN_SET);
+```
 
 ## Logbook
 
@@ -146,40 +187,6 @@ The **Software** folder contains:
 ### Session 17 (18/03/2025)
 
 ### Session 18 (25/03/2025)
-
-## Environments used: 
-
-### Machines Used
-- **PC (Windows/macOS/Linux)**: Used for development (STM32CubeIDE, Python, OnShape, etc.).
-- **Function Generator (GBF)**: Used to simulate control signals during motor testing.
-- **Laser Cutter (FabLab)**: Used to cut the wooden drone structure.
-
-### Hardware
-- **Raspberry Pi Zero**: A single-board computer used for image capture, PCB interfacing, and running Python scripts.
-- **STM32L412KBT6**: Main microcontroller used on the custom PCB.
-- **VL53L1X**: Time-of-Flight (ToF) distance sensor.
-- **ESC (Electronic Speed Controllers)**: To control brushless motors.
-- **Brushless Motors**: Used to generate drone thrust.
-- **LDO BU33TD3WG**: Low-dropout voltage regulator.
-- **Buck Converter 17395xx36**: DC-DC converter used to step down voltage.
-- **MOSFETs**: Used for power switching and motor control.
-- **Camera (connected to Raspberry Pi)**: Captures aerial images.
-
-### Software
-#### Embedded Development
-- **STM32CubeIDE**: Used to write, compile, and flash firmware to the microcontroller.
-- **STM32 HAL Drivers**: Low-level drivers for managing STM32 peripherals.
-
-#### Electronic Design
-- **KiCad**: Used for circuit schematic design, PCB layout, and Gerber/BOM export.
-- **OnShape**: Used for 3D modeling of the drone structure.
-
-#### Python Development
-- **Python 3**: Used for drone communication scripts and the graphical user interface (GUI).
-- **Tkinter / PyQt**: Used to build the GUI interface.
-- **Pygame / Other sound libraries**: For playing feedback sounds (from the `sounds/` folder).
-- **Flask / TCP Sockets**: For communication between the GUI and the drone.
-
 
 ## Picture of Mini-Ingenuity 
 
