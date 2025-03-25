@@ -32,6 +32,12 @@ Ingenuity has opened up new prospects for Mars exploration. NASA and ESA, as par
 
 Our project is to try and make this helicopter in miniature mode. In other words, we want to create a vehicle that can move through the air and take a photo of what's happening below. To do this, we'll have a total of 10 sessions in which we'll have to mix PCBs, coding, soldering and so on.
 
+## Project architecture
+
+![Mini Ingenuity Drone architecture](Hardware/Architecture/Architecture%20Schematic%20V4.jpg)
+
+![Architecture explanations](Assets/architecture.png)
+
 ## Description of repo structure:
 
 ``````
@@ -94,6 +100,8 @@ The **Software** folder contains:
 ## Precision on the TOF VL53L1X
 
 Start by copying the ```VL53L1X_ULD_API``` in your project. You want to configure the paths in your IDE (eg. in STM32CubeIDE : ```Project > Properties``` then ```C/C++ General > Paths and Symbols```).
+
+Source (code and explanations): https://github.com/lfiack/tof_VL53L1X-SATEL/blob/main/README.md
 
 ## Logbook
 
