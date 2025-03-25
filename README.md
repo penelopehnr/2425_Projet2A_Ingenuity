@@ -103,6 +103,10 @@ Start by copying the ```VL53L1X_ULD_API``` in your project. You want to configur
 
 Source (code and explanations): https://github.com/lfiack/tof_VL53L1X-SATEL/blob/main/README.md
 
+## Precise notice of our project 
+
+[Mini-Ingenuity notice](Mini-Ingenuity_notice.md)
+
 ## Logbook
 
 [Logbook](LogBook.md)
