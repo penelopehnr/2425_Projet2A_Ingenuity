@@ -34,10 +34,9 @@ Our project is to try and make this helicopter in miniature mode. In other words
 
 ``````
 .
-├── Assets/            # Project images (drone, PCB, etc.)
+├── Assets/            # Project images (drone, PCB)
 ├── Datasheets/        # Component datasheets
 ├── Hardware/          # Architecture diagrams and KiCad (PCB) files
-├── Output/            # Excel files or final reports
 ├── Software/          # Embedded code (STM32) + Python code + TOF module
 ├── README.md          # Main project documentation
 ├── Ingenuity March 2020.md  # Background on the Mars 2020 mission
