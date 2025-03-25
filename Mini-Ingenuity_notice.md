@@ -31,8 +31,9 @@ Machine used: a 3D printer
 
 files concerned: `Hardware/Wood structure/Bois.stl`
 
-Machine used: a laser cutter 
 Our wood sheets are 5 mm thick. 
+
+Machine used: a laser cutter 
 
 ### Picture of the Structure 
 
