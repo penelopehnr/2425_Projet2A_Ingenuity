@@ -31,8 +31,8 @@ Machine used: a 3D printer
 
 files concerned: `Hardware/Wood structure/Bois.stl`
 
-Machine used: a laser cutter
-Our wood sheets are 5 mm thick.
+Machine used: a laser cutter 
+Our wood sheets are 5 mm thick. 
 
 ### Picture of the Structure 
 
@@ -59,7 +59,7 @@ All the KiCad files required to build the PCB are available in this repository.
 
 ### PINs
 
-[PIN](Hardware/STM32_Pins.png)
+![PIN](Hardware/STM32_Pins.png)
 
 
 ### TOF 
