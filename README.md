@@ -54,7 +54,7 @@ The **Software** folder contains:
 - The **Python code** used to build the graphical user interface (GUI) on the PC to communicate with the Raspberry Pi (`Client_GUI.py`).
 - The **Python code** running on the Raspberry Pi, which handles communication with the microcontroller and takes pictures (`server.py`).
 - The **TOF code** (developed with STM32CubeIDE), which is responsible for sending the drone’s altitude using a Time-of-Flight sensor.
-- The **C code** (also under STM32CubeIDE) in Ingenuity_2A, running on the STM32 microcontroller, which receives commands from the Raspberry Pi and manages the components such as motors, TOF sensor, etc.
+- The **C code** (also under STM32CubeIDE) in `Ingenuity_2A`, running on the STM32 microcontroller, which receives commands from the Raspberry Pi and manages the components such as motors, TOF sensor, etc.
 
 
 ## Logbook

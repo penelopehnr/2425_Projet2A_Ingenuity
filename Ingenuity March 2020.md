@@ -21,9 +21,6 @@ The Mars Sample Return mission will be Ingenuity's first operational use. Develo
 
 NASA's website with extensive information on Ingenuity: (https://mars.nasa.gov/technology/helicopter/#)
 
-<img width=“1014” alt=“Screenshot 2024-02-26 at 14 47 01” src=“https://github.com/joel-colaso/2324_Projet1AB_-ingenuity-/assets/161329228/ec56dfa6-b859-430e-8665-364e45866630”>
-
-<img width=“1210” alt=“Screenshot 2024-02-26 at 14 47 34” src=“https://github.com/joel-colaso/2324_Projet1AB_-ingenuity-/assets/161329228/0fe71f29-cba0-405e-a0ff-b863bfc618c3”>
 
 ## Exploring helicopter operation
 
