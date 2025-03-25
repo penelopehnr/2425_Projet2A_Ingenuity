@@ -27,7 +27,7 @@ The screws, bolts, and tubes allow you to assemble the wooden parts together and
 
 ### Wood structure 
 
-files concerned: `Hardware/Wood structure/`
+files concerned: `Hardware/Wood structure/Bois.stl`
 
 
 ### Picture of the Structure 
