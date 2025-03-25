@@ -53,7 +53,7 @@ All the KiCad files required to build the PCB are available in this repository.
 
 ### Code for the microcontroller
 
-## PINs
+### PINs
 
 [PIN](Hardware/STM32_Pins.png)
 
