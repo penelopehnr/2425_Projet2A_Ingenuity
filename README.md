@@ -44,6 +44,19 @@ Our project is to try and make this helicopter in miniature mode. In other words
 
 ``````
 
+In the **Assets** folder, you will find pictures of the drone and the assembled PCB.
+
+The **Datasheets** folder contains documentation for all the components we used throughout the project.
+
+The **Hardware** folder includes all the KiCad files needed to reproduce our custom PCB, along with the Bill of Materials (BOM) listing all components, their references, and specifications.
+
+The **Software** folder contains:
+- The **Python code** used to build the graphical user interface (GUI) on the PC to communicate with the Raspberry Pi (`Client_GUI.py`).
+- The **Python code** running on the Raspberry Pi, which handles communication with the microcontroller and takes pictures (`server.py`).
+- The **TOF code** (developed with STM32CubeIDE), which is responsible for sending the drone’s altitude using a Time-of-Flight sensor.
+- The **C code** (also under STM32CubeIDE) in Ingenuity_2A, running on the STM32 microcontroller, which receives commands from the Raspberry Pi and manages the components such as motors, TOF sensor, etc.
+
+
 ## Logbook
 
 ### Session 1 (08/10/2024)
@@ -163,9 +176,9 @@ Our project is to try and make this helicopter in miniature mode. In other words
 
 #### Python Development
 - **Python 3**: Used for drone communication scripts and the graphical user interface (GUI).
-- **Tkinter / PyQt / Other** *(to be confirmed)*: Used to build the GUI interface.
-- **Pygame / Other sound libraries** *(optional)*: For playing feedback sounds (from the `sounds/` folder).
-- **Flask / TCP Sockets** *(if used in `server.py`/`client.py`)*: For communication between the GUI and the drone *(to confirm)*.
+- **Tkinter / PyQt**: Used to build the GUI interface.
+- **Pygame / Other sound libraries**: For playing feedback sounds (from the `sounds/` folder).
+- **Flask / TCP Sockets**: For communication between the GUI and the drone.
 
 
 ## Picture of Mini-Ingenuity 
