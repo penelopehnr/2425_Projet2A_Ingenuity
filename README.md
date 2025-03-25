@@ -32,7 +32,6 @@ Our project is to try and make this helicopter in miniature mode. In other words
 
 ## Description of repo structure:
 
---
 
 ## Logbook
 
@@ -118,7 +117,11 @@ Our project is to try and make this helicopter in miniature mode. In other words
 - Development of new features for the Python GUI code.
 - Continued development of the C code (motor control and TOF sensor data acquisition).
 
---
+### Session 16 (11/03/2025)
+
+### Session 17 (18/03/2025)
+
+### Session 18 (25/03/2025)
 
 ## Environments used: 
 
@@ -126,7 +129,6 @@ Our project is to try and make this helicopter in miniature mode. In other words
 - **PC (Windows/macOS/Linux)**: Used for development (STM32CubeIDE, Python, OnShape, etc.).
 - **Function Generator (GBF)**: Used to simulate control signals during motor testing.
 - **Laser Cutter (FabLab)**: Used to cut the wooden drone structure.
-
 
 ### Hardware
 - **Raspberry Pi Zero**: A single-board computer used for image capture, PCB interfacing, and running Python scripts.
@@ -138,7 +140,6 @@ Our project is to try and make this helicopter in miniature mode. In other words
 - **Buck Converter 17395xx36**: DC-DC converter used to step down voltage.
 - **MOSFETs**: Used for power switching and motor control.
 - **Camera (connected to Raspberry Pi)**: Captures aerial images.
-
 
 ### Software
 #### Embedded Development
@@ -154,8 +155,6 @@ Our project is to try and make this helicopter in miniature mode. In other words
 - **Tkinter / PyQt / Other** *(to be confirmed)*: Used to build the GUI interface.
 - **Pygame / Other sound libraries** *(optional)*: For playing feedback sounds (from the `sounds/` folder).
 - **Flask / TCP Sockets** *(if used in `server.py`/`client.py`)*: For communication between the GUI and the drone *(to confirm)*.
-
----
 
 
 ## Picture of Mini-Ingenuity 
