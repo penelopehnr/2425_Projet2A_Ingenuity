@@ -24,6 +24,8 @@ Ingenuity has opened up new prospects for Mars exploration. NASA and ESA, as par
 
  Our project is therefore to try to build the Ingenuity module in miniature. In other words, we want to create a vehicle that can move through the air and take a photo of what's going on below.
 
+ [Learn more about the Mars 2020 mission](Ingenuity%20March%202020.md)
+
 ![Ingenuity picture](https://github.com/joel-colaso/2324_Projet1AB_-ingenuity-/assets/161329228/e31ebabd-f48c-485a-bf0c-799dc236c984)
 
 ## Our project
