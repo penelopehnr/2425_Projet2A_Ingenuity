@@ -105,6 +105,8 @@ Source (code and explanations): https://github.com/lfiack/tof_VL53L1X-SATEL/blob
 
 ## Logbook
 
+[Logbook](LogBook.md)
+
 ### Session 1 (08/10/2024)
 - Start writing the ReadMe.
 - Modelling of the first architecture diagram (V1).
