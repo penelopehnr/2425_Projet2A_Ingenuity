@@ -36,7 +36,7 @@ Our project is to try and make this helicopter in miniature mode. In other words
 .
 ├── Assets/            # Project images (drone, PCB)
 ├── Datasheets/        # Component datasheets
-├── Hardware/          # Architecture diagrams and KiCad (PCB) files
+├── Hardware/          # Architecture diagrams, KiCad (PCB) files and 3D files
 ├── Software/          # Embedded code (STM32) + Python code + TOF module
 ├── README.md          # Main project documentation
 ├── Ingenuity March 2020.md  # Background on the Mars 2020 mission
@@ -48,7 +48,7 @@ In the **Assets** folder, you will find pictures of the drone and the assembled 
 
 The **Datasheets** folder contains documentation for all the components we used throughout the project.
 
-The **Hardware** folder includes all the KiCad files needed to reproduce our custom PCB, along with the Bill of Materials (BOM) listing all components, their references, and specifications.
+The **Hardware** folder includes all the KiCad files needed to reproduce our custom PCB, along with the Bill of Materials (BOM) listing all components, their references, and specifications. You will also find files for 3D printing and laser cutting the various structural parts of the drone.
 
 The **Software** folder contains:
 - The **Python code** used to build the graphical user interface (GUI) on the PC to communicate with the Raspberry Pi (`Client_GUI.py`).
