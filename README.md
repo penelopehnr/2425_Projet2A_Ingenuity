@@ -93,11 +93,6 @@ The **Software** folder contains:
 
 Start by copying the ```VL53L1X_ULD_API``` in your project. You want to configure the paths in your IDE (eg. in STM32CubeIDE : ```Project > Properties``` then ```C/C++ General > Paths and Symbols```).
 
-Don't forget to set the XSDN pin high before everything else. For instance :
-```C
-HAL_GPIO_WritePin(XSDN_GPIO_Port, XSDN_Pin, GPIO_PIN_SET);
-```
-
 ## Logbook
 
 ### Session 1 (08/10/2024)
