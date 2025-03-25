@@ -25,10 +25,14 @@ files concerned: `Hardware/3D files/files.stl`:
 ``````
 The screws, bolts, and tubes allow you to assemble the wooden parts together and build the structure of the drone.
 
+Machine used: a 3D printer
+
 ### Wood structure 
 
 files concerned: `Hardware/Wood structure/Bois.stl`
 
+Machine used: a laser cutter
+Our wood sheets are 5 mm thick.
 
 ### Picture of the Structure 
 
