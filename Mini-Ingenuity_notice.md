@@ -60,10 +60,31 @@ Picture of the PCB: [PCB Picture](Assets/IMG_6468.png)
 
 files concerned: `Software/Python`
 requiered functions: `Software/Python/requirements.txt`
+Notice : `Software/Python/Notice.md`
+
+#### Initialization
+
+Start by importing all the libraries listed in the `requirements` file. Follow the steps indicated in `Software/Python/Notice.md`.
+
+#### Graphic User Interface
+
+There are a total of five different buttons:  
+- First, you must click on the gear icon in the top left corner. This allows you to enter your system's "coordinates": **IP** and **port**.  
+
+- Then, press the button with the Wi-Fi logo on the right to connect to the RPi0 (Note that the script `Software/Python/server.py` must have been executed on the Raspberry Pi beforehand).  
+
+- Now, let's go over the three remaining buttons:  
+    - The button on the far left (***Command***) allows you to control the drone's altitude using your keyboard. Here are the available commands:  
+        - Alt + UP_Arrow → +1   //   Alt + DOWN_Arrow → -1  
+        - UP_Arrow → +5   //   DOWN_Arrow → -5  
+        - Ctrl + UP_Arrow → +10   //   Ctrl + DOWN_Arrow → -10  
+    - The center button (***Photo***) allows you to take a photo (how to retrieve it is explained in `Notice.md`).  
+    - The button on the right (***Auto***) allows you to enter a specific height (in mm) for the drone to reach.
+
 
 ### Code for the microcontroller (STM32CubeIDE)
 
-files concerned: 
+files concerned: `Software/C`
 
 #### PINs
 
