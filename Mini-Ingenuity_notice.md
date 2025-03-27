@@ -62,11 +62,11 @@ files concerned: `Software/Python`
 requiered functions: `Software/Python/requirements.txt`
 Notice : `Software/Python/Notice.md`
 
-#### Initialization
+#### <u>Initialization</u>
 
 Start by importing all the libraries listed in the `requirements` file. Follow the steps indicated in `Software/Python/Notice.md`.
 
-#### Graphic User Interface
+#### <u>Graphic User Interface</u>
 
 There are a total of five different buttons:  
 - First, you must click on the gear icon in the top left corner. This allows you to enter your system's "coordinates": **IP** and **port**.  
@@ -81,11 +81,11 @@ There are a total of five different buttons:
     - The center button (***Photo***) allows you to take a photo (how to retrieve it is explained in `Notice.md`).  
     - The button on the right (***Auto***) allows you to enter a specific height (in mm) for the drone to reach.
 
-#### Emergency stop
+#### <u>Emergency stop</u>
 
 If you want to do an Emergency stop, you just have to tap the ***esc*** touch on your keyboard, this will disconnect the computer to the RPi0 and the speed of the motor will decrease to zero. 
 
-#### Get the photo
+#### <u>Get the photo</u>
 
 To get the photo, everything is explained in the `Software/Python/Notice.md` file. 
 
