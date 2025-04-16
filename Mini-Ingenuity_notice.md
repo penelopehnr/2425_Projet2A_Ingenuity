@@ -27,6 +27,8 @@ The screws, bolts, and tubes allow you to assemble the wooden parts together and
 
 Machine used: a 3D printer
 
+![3D parts](Assets/3D.png)
+
 ### Wood structure 
 
 files concerned: `Hardware/Wood structure/Bois.stl`
@@ -36,6 +38,8 @@ Our wood sheets are 5 mm thick.
 Machine used: a laser cutter 
 
 ### Picture of the Structure 
+
+![Picture of the structure](Assets/3D_Montage.png)
 
 ## PCB (Hardware files)
 
