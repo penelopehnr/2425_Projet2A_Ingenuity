@@ -113,6 +113,8 @@ Source (code and explanations): https://github.com/lfiack/tof_VL53L1X-SATEL/blob
 
 ## Picture of Mini-Ingenuity 
 
+![Picture of Mini-Ingenuity](Assets/Mini_Ingenuity_final.png)
+
 
 
 
