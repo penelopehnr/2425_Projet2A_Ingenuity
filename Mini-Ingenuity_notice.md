@@ -116,7 +116,18 @@ After that, use the "Project Explorer" view to navigate to the "main.c" file as 
 
 ![image](https://github.com/user-attachments/assets/13d1f665-b663-4c77-becd-4bef25b83f6b)
 
+Then plug your STLINK-V3SET cable into the PCB (Green circle in the picture):
 
+<img width="438" alt="STLINK Connected image" src="https://github.com/user-attachments/assets/a2486da9-fbbc-40ea-af71-6942a5be3e7a" />
+
+Plug the other end to the computer that's running STM32CubeIDE using an USB cable and you are ready to go.
+
+Finally, click the "Run" button to load the program to the microcontroller and start it's execution.
+
+<img width="582" alt="Run program capture" src="https://github.com/user-attachments/assets/e006fc37-acef-412e-9307-0b9ba731d707" />
+
+
+The drone is now ready and will be waiting for the instructions sent by the python powered user interface.
 
 files concerned: `Software/C`
 
