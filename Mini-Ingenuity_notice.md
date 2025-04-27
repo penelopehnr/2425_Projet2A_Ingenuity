@@ -95,6 +95,29 @@ To get the photo, everything is explained in the `Software/Python/Notice.md` fil
 
 ### Code for the microcontroller (STM32CubeIDE)
 
+First, if you don't already have it, download the software STM32CubeIDE. 
+
+Use the official ST website: https://www.st.com/en/development-tools/stm32cubeide.html
+
+<img width="895" alt="STM32CubeIDE download capture" src="https://github.com/user-attachments/assets/7ebe9ae1-77f5-43e1-b3b6-7d346988740f" />
+
+
+Then also download our STM32 project from this github repository.
+
+You can dowload the repository as shown in the following capture:
+
+![image](https://github.com/user-attachments/assets/6c6a8438-3ebc-40d2-958b-6cc9d564f9d8)
+
+Now, you're ready to open the code with STM32CubeIDE. You can click "Open Project from File System..." and select the one you just downloaded.
+
+![image](https://github.com/user-attachments/assets/33017724-4e7a-4a51-8376-77374d538231)
+
+After that, use the "Project Explorer" view to navigate to the "main.c" file as shown here:
+
+![image](https://github.com/user-attachments/assets/13d1f665-b663-4c77-becd-4bef25b83f6b)
+
+
+
 files concerned: `Software/C`
 
 #### PINs
