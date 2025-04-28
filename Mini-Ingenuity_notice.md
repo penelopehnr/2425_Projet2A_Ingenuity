@@ -102,7 +102,7 @@ Use the official ST website: https://www.st.com/en/development-tools/stm32cubeid
 <img width="895" alt="STM32CubeIDE download capture" src="https://github.com/user-attachments/assets/7ebe9ae1-77f5-43e1-b3b6-7d346988740f" />
 
 
-Then also download our STM32 project from this github repository.
+Then also download our STM32 project ("Software/C" folder) from this github repository.
 
 You can dowload the repository as shown in the following capture:
 
