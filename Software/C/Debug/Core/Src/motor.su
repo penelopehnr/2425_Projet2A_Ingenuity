@@ -1,4 +1,8 @@
-../Core/Src/motor.c:22:5:percentageToMicrosecondsAtHighState	24	static
-../Core/Src/motor.c:30:6:motor_SetPower	24	static
-../Core/Src/motor.c:43:6:motor_Init	16	static
-../Core/Src/motor.c:59:6:motor_TurnOff	16	static
+../Core/Src/motor.c:23:5:percentageToMicrosecondsAtHighState	24	static
+../Core/Src/motor.c:31:6:MOTOR_SetPower	24	static
+../Core/Src/motor.c:51:6:MOTOR_SetBoth	32	static
+../Core/Src/motor.c:75:6:MOTOR_Init	16	static
+../Core/Src/motor.c:91:6:MOTOR_InitBoth	16	static
+../Core/Src/motor.c:110:6:MOTOR_TurnOff	16	static
+../Core/Src/motor.c:116:6:MOTOR_SetLinear	48	static
+../Core/Src/motor.c:142:6:MOTOR_SetLinearBoth	48	static

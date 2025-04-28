@@ -34,7 +34,13 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim_ex.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h \
- ../Core/Inc/motor.h ../Core/Inc/main.h ../Core/Inc/decodeInstruction.h
+ ../Core/Inc/adc.h ../Core/Inc/main.h ../Core/Inc/i2c.h ../Core/Inc/spi.h \
+ ../Core/Inc/tim.h ../Core/Inc/usart.h ../Core/Inc/gpio.h \
+ ../Core/Inc/motor.h ../Core/Inc/decodeInstruction.h \
+ C:/Users/PC/Desktop/Programacion/Programacion_2025/Projet2A/2425_Projet2A_Ingenuity/Software/Ingenuity_2A/Drivers/VL53L1X_ULD_API/core/VL53L1X_api.h \
+ C:/Users/PC/Desktop/Programacion/Programacion_2025/Projet2A/2425_Projet2A_Ingenuity/Software/Ingenuity_2A/Drivers/VL53L1X_ULD_API/platform/vl53l1_platform.h \
+ C:/Users/PC/Desktop/Programacion/Programacion_2025/Projet2A/2425_Projet2A_Ingenuity/Software/Ingenuity_2A/Drivers/VL53L1X_ULD_API/platform/vl53l1_types.h \
+ C:/Users/PC/Desktop/Programacion/Programacion_2025/Projet2A/2425_Projet2A_Ingenuity/Software/Ingenuity_2A/Drivers/VL53L1X_ULD_API/platform/vl53l1_error_codes.h
 ../Core/Inc/main.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:
 ../Core/Inc/stm32l4xx_hal_conf.h:
@@ -71,6 +77,16 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_tim_ex.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h:
-../Core/Inc/motor.h:
+../Core/Inc/adc.h:
 ../Core/Inc/main.h:
+../Core/Inc/i2c.h:
+../Core/Inc/spi.h:
+../Core/Inc/tim.h:
+../Core/Inc/usart.h:
+../Core/Inc/gpio.h:
+../Core/Inc/motor.h:
 ../Core/Inc/decodeInstruction.h:
+C:/Users/PC/Desktop/Programacion/Programacion_2025/Projet2A/2425_Projet2A_Ingenuity/Software/Ingenuity_2A/Drivers/VL53L1X_ULD_API/core/VL53L1X_api.h:
+C:/Users/PC/Desktop/Programacion/Programacion_2025/Projet2A/2425_Projet2A_Ingenuity/Software/Ingenuity_2A/Drivers/VL53L1X_ULD_API/platform/vl53l1_platform.h:
+C:/Users/PC/Desktop/Programacion/Programacion_2025/Projet2A/2425_Projet2A_Ingenuity/Software/Ingenuity_2A/Drivers/VL53L1X_ULD_API/platform/vl53l1_types.h:
+C:/Users/PC/Desktop/Programacion/Programacion_2025/Projet2A/2425_Projet2A_Ingenuity/Software/Ingenuity_2A/Drivers/VL53L1X_ULD_API/platform/vl53l1_error_codes.h:

@@ -9,6 +9,8 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include Drivers/VL53L1X_ULD_API/platform/subdir.mk
+-include Drivers/VL53L1X_ULD_API/core/subdir.mk
 -include Drivers/STM32L4xx_HAL_Driver/Src/subdir.mk
 -include Core/Startup/subdir.mk
 -include Core/Src/subdir.mk
@@ -60,8 +62,8 @@ all: main-build
 main-build: Ingenuity_2A.elf secondary-outputs
 
 # Tool invocations
-Ingenuity_2A.elf Ingenuity_2A.map: $(OBJS) $(USER_OBJS) C:\Users\PC\Desktop\Programacion_2025\Projet2A\2425_Projet2A_Ingenuity\Software\Ingenuity_2A\STM32L412KBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Ingenuity_2A.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\PC\Desktop\Programacion_2025\Projet2A\2425_Projet2A_Ingenuity\Software\Ingenuity_2A\STM32L412KBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Ingenuity_2A.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Ingenuity_2A.elf Ingenuity_2A.map: $(OBJS) $(USER_OBJS) C:\Users\PC\Desktop\Programacion\Programacion_2025\Projet2A\2425_Projet2A_Ingenuity\Software\Ingenuity_2A\STM32L412KBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Ingenuity_2A.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\PC\Desktop\Programacion\Programacion_2025\Projet2A\2425_Projet2A_Ingenuity\Software\Ingenuity_2A\STM32L412KBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Ingenuity_2A.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

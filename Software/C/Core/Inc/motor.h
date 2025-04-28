@@ -19,11 +19,13 @@ typedef struct {
 } h_motor_t;
 
 
-int percentageToMicrosecondsAtHighState(int percentage);
-int percentageToMicrosecondsAtHighState(int percentage);
+int percentageToMicrosecondsAtHighState(float percentage);
+void MOTOR_SetPower(h_motor_t* h_motor, float percentage);
+void MOTOR_SetLinear(h_motor_t* h_motor, float percentage, int timeInMilliseconds);
 void MOTOR_Init(h_motor_t* h_motor);
 void MOTOR_TurnOff(h_motor_t* h_motor);
-
+void MOTOR_SetLinearBoth(h_motor_t* h_motor1, h_motor_t* h_motor2, float finalPercentage, int timeInMilliseconds);
+void MOTOR_InitBoth(h_motor_t* h_motor1, h_motor_t* h_motor2);
 
 #endif /* INC_MOTOR_H_ */
 
